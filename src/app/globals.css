@@ -7,7 +7,9 @@
   --bg-elevated: #192533;
   --brand-red: #b51219;
   --brand-red-hover: #9b0f15;
-  --brand-red-glow: rgba(181, 18, 25, 0.16);
+  --brand-red-glow: rgba(181, 18, 25, 0.22);
+  --accent-gold: #d4b27a;
+  --accent-gold-muted: #c9a46b;
   --text-red-accent: #f4585e;
   --text-primary: #f5f6f7;
   --text-secondary: #a7b0bc;

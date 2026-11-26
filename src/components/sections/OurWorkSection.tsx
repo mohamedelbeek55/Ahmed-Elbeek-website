@@ -62,10 +62,10 @@ export function OurWorkSection({ content }: OurWorkSectionProps) {
                   backgroundSize: "24px 24px",
                 }}
               >
-                {/* Restrained crimson architectural corner marks */}
+                {/* Restrained champagne-gold & crimson architectural corner marks */}
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute top-3 start-3 h-3 w-3 border-t-2 border-s-2 border-[#B51219]/60"
+                  className="pointer-events-none absolute top-3 start-3 h-3 w-3 border-t-2 border-s-2 border-[#D4B27A]/65"
                 />
                 <span
                   aria-hidden="true"

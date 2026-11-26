@@ -18,11 +18,11 @@ export function ContactSection({ content }: ContactSectionProps) {
     >
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <div
-          className="relative overflow-hidden rounded-[18px] border border-white/10 bg-[#151F2B] p-6 sm:p-8 lg:p-10"
+          className="relative overflow-hidden rounded-[18px] border border-[#D4B27A]/25 bg-[#151F2B] p-6 sm:p-8 lg:p-10"
           style={{
             backgroundImage: isRtl
-              ? "radial-gradient(460px circle at 92% 18%, rgba(181, 18, 25, 0.17), transparent 70%)"
-              : "radial-gradient(460px circle at 8% 18%, rgba(181, 18, 25, 0.17), transparent 70%)",
+              ? "radial-gradient(460px circle at 92% 18%, rgba(181, 18, 25, 0.22), transparent 70%)"
+              : "radial-gradient(460px circle at 8% 18%, rgba(181, 18, 25, 0.22), transparent 70%)",
           }}
         >
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
@@ -43,7 +43,7 @@ export function ContactSection({ content }: ContactSectionProps) {
                 href={COMPANY_CONTACT.getWhatsAppUrl(content.locale)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2.5 rounded-[10px] bg-[#B51219] px-6 text-[15px] font-bold text-white shadow-[0_12px_28px_-6px_rgba(181,18,25,0.6)] transition-colors hover:bg-[#9B0F15] sm:w-auto"
+                className="inline-flex min-h-[50px] w-full items-center justify-center gap-2.5 rounded-[10px] border border-[#D4B27A]/35 bg-gradient-to-b from-[#CF1921] via-[#B51219] to-[#870B10] px-6 text-[15px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_12px_28px_-6px_rgba(181,18,25,0.65)] transition-all hover:brightness-110 sm:w-auto"
               >
                 <WhatsAppIcon className="h-[18px] w-[18px]" />
                 <span>{content.contact.whatsappCta}</span>

@@ -61,7 +61,7 @@ export function Header({ content }: HeaderProps) {
               href={COMPANY_CONTACT.getWhatsAppUrl(content.locale)}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden h-10 items-center gap-2 rounded-[10px] bg-[#B51219] px-4 text-[14px] font-bold text-white shadow-[0_8px_22px_-6px_rgba(181,18,25,0.55)] transition-colors hover:bg-[#9B0F15] lg:inline-flex"
+              className="hidden h-10 items-center gap-2 rounded-[10px] border border-[#D4B27A]/30 bg-gradient-to-b from-[#CF1921] via-[#B51219] to-[#870B10] px-4 text-[14px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_8px_22px_-6px_rgba(181,18,25,0.58)] transition-all hover:brightness-110 lg:inline-flex"
             >
               <WhatsAppIcon className="h-4 w-4" />
               <span>{content.header.whatsappCta}</span>

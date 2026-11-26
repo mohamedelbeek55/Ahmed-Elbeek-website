@@ -61,6 +61,7 @@ export interface SiteContent {
     skipToContent: string;
   };
   hero: {
+    portsLine: string;
     headlineLine1: string;
     headlineLine2: string;
     subheadline: string;

@@ -9,10 +9,9 @@ interface HeroSectionProps {
 }
 
 /**
- * Approved Concept A — Authentic Al-Awja Hero.
- * Desktop preserves split left-photo / right-panel composition with diagonal crimson separator.
- * Mobile presents an uncluttered, sharp panoramic crop preserving flag, gate, and truck queue
- * transitioning smoothly into the dark corporate content stage.
+ * Option 2 Executive Luxury Hero (Authentic Al-Awja + Obsidian + Ruby + Champagne Gold).
+ * Prioritizes mobile first-screen drama, photo brightness/clarity, double-foil crimson/gold
+ * geometric divider, and sculpted CTA surfaces while preserving the approved desktop split.
  */
 export function HeroSection({ content }: HeroSectionProps) {
   const isRtl = content.dir === "rtl";
@@ -26,10 +25,10 @@ export function HeroSection({ content }: HeroSectionProps) {
       className="relative overflow-hidden bg-[#0B0F14]"
     >
       {/* ================= DESKTOP HERO (>= 1024px) ================= */}
-      <div className="relative hidden lg:block lg:h-[540px] xl:h-[560px]">
-        {/* Authentic Al-Awja Yard Photograph (Left in RTL / Right in LTR) */}
+      <div className="relative hidden lg:block lg:h-[560px] xl:h-[580px]">
+        {/* Authentic Al-Awja Yard Photograph — vibrant natural exposure without heavy middle dimming */}
         <div
-          className={`absolute inset-y-0 w-[64%] overflow-hidden ${
+          className={`absolute inset-y-0 w-[65%] overflow-hidden ${
             isRtl ? "left-0" : "right-0"
           }`}
         >
@@ -38,68 +37,102 @@ export function HeroSection({ content }: HeroSectionProps) {
             alt={content.hero.yardAlt}
             fill
             priority
-            sizes="(min-width: 1024px) 65vw, 100vw"
-            className="object-cover object-[66%_43%] brightness-[1.06] contrast-[1.05]"
+            sizes="(min-width: 1024px) 66vw, 100vw"
+            className="object-cover object-[65%_42%] brightness-[1.11] contrast-[1.08] saturate-[1.08]"
           />
-          {/* Subtle atmospheric edge blending into dark surface */}
           <div
             aria-hidden="true"
             className="absolute inset-0"
             style={{
               background: isRtl
-                ? "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.16) 22%, transparent 50%), linear-gradient(to right, rgba(11,15,20,0.42) 0%, transparent 18%)"
-                : "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.16) 22%, transparent 50%), linear-gradient(to left, rgba(11,15,20,0.42) 0%, transparent 18%)",
+                ? "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.12) 22%, transparent 45%), linear-gradient(to right, rgba(11,15,20,0.38) 0%, transparent 16%)"
+                : "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.12) 22%, transparent 45%), linear-gradient(to left, rgba(11,15,20,0.38) 0%, transparent 16%)",
             }}
           />
         </div>
 
-        {/* Diagonal Crimson Geometric Separator + Dark Content Backing */}
+        {/* Sculpted Multi-Plane Diagonal Prism: Ruby Wing + Lacquered Crimson Blade + Champagne Gold Glint */}
         <svg
-          viewBox="0 0 1440 560"
+          viewBox="0 0 1440 580"
           preserveAspectRatio="none"
           aria-hidden="true"
           className={`pointer-events-none absolute inset-0 z-10 h-full w-full ${
             isRtl ? "" : "-scale-x-100"
           }`}
         >
-          <polygon
-            points="788,0 904,0 762,560 646,560"
-            fill="rgba(181, 18, 25, 0.28)"
-          />
-          <polygon
-            points="874,0 890,0 748,560 732,560"
-            fill="#B51219"
-          />
-          <polygon
-            points="889,0 1440,0 1440,560 747,560"
-            fill="#0B0F14"
-          />
+          <defs>
+            <linearGradient id="rubySlashWing" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(181, 18, 25, 0.42)" />
+              <stop offset="100%" stopColor="rgba(181, 18, 25, 0.16)" />
+            </linearGradient>
+            <linearGradient id="crimsonPrism" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#CF1820" />
+              <stop offset="50%" stopColor="#B51219" />
+              <stop offset="100%" stopColor="#850B10" />
+            </linearGradient>
+            <linearGradient id="goldGlintEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="rgba(212, 178, 122, 0.85)" />
+              <stop offset="55%" stopColor="rgba(212, 178, 122, 0.45)" />
+              <stop offset="100%" stopColor="rgba(212, 178, 122, 0.8)" />
+            </linearGradient>
+          </defs>
+
+          {/* Translucent ruby atmospheric aura */}
+          <polygon points="784,0 906,0 760,580 638,580" fill="url(#rubySlashWing)" />
+          {/* Champagne Gold specular catch line */}
+          <polygon points="871,0 874,0 728,580 725,580" fill="url(#goldGlintEdge)" />
+          {/* Lacquered Crimson structural blade */}
+          <polygon points="874,0 892,0 746,580 728,580" fill="url(#crimsonPrism)" />
+          {/* Obsidian dark panel backing */}
+          <polygon points="891,0 1440,0 1440,580 745,580" fill="#0B0F14" />
         </svg>
 
-        {/* Subtle Ambient Red Lighting */}
+        {/* Subtle Architectural Grid Watermark + Warm Ruby/Gold Ambient Lighting on Panel */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 z-10 w-[48%]"
+          style={{
+            insetInlineStart: 0,
+            backgroundImage:
+              "linear-gradient(to right, rgba(212,178,122,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(212,178,122,0.03) 1px, transparent 1px)",
+            backgroundSize: "38px 38px",
+            maskImage: "radial-gradient(ellipse at 50% 48%, black 20%, transparent 78%)",
+            WebkitMaskImage: "radial-gradient(ellipse at 50% 48%, black 20%, transparent 78%)",
+          }}
+        />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-10"
           style={{
             background: isRtl
-              ? "radial-gradient(540px circle at 84% 88%, rgba(181, 18, 25, 0.16), transparent 70%)"
-              : "radial-gradient(540px circle at 16% 88%, rgba(181, 18, 25, 0.16), transparent 70%)",
+              ? "radial-gradient(560px circle at 84% 78%, rgba(181, 18, 25, 0.22), transparent 68%), radial-gradient(380px circle at 92% 20%, rgba(212, 178, 122, 0.06), transparent 65%)"
+              : "radial-gradient(560px circle at 16% 78%, rgba(181, 18, 25, 0.22), transparent 68%), radial-gradient(380px circle at 8% 20%, rgba(212, 178, 122, 0.06), transparent 65%)",
           }}
         />
 
         {/* Desktop Content Column */}
         <div className="relative z-20 mx-auto flex h-full max-w-[1380px] items-center px-8">
-          <div className="w-[44%] max-w-[560px]">
-            <h1 className="text-[44px] font-extrabold leading-[1.18] text-[#F5F6F7] xl:text-[52px]">
-              <span className="block">{content.hero.headlineLine1}</span>
-              <span className="mt-1 block">{content.hero.headlineLine2}</span>
-            </h1>
+          <div className="w-[45%] max-w-[565px]">
+            {/* Factual Champagne-Gold Ports Kicker */}
+            <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-[#D4B27A]/30 bg-[#151F2B]/75 px-3.5 py-1.5 backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#D4B27A]" aria-hidden="true" />
+              <span className="text-[12.5px] font-semibold text-[#D4B27A]">
+                {content.hero.portsLine}
+              </span>
+            </div>
 
-            <p className="mt-4 text-[21px] font-bold leading-[1.4] text-[#F4585E] xl:text-[23px]">
-              {content.hero.subheadline}
-            </p>
+            <div className="relative ps-4 before:absolute before:inset-y-1 before:start-0 before:w-[3px] before:rounded-full before:bg-gradient-to-b before:from-[#D4B27A] before:via-[#B51219] before:to-[#B51219]/25">
+              <h1 className="text-[46px] font-extrabold leading-[1.16] text-[#F5F6F7] xl:text-[54px]">
+                <span className="block">{content.hero.headlineLine1}</span>
+                <span className="mt-1 block">{content.hero.headlineLine2}</span>
+              </h1>
 
-            <p className="mt-4 max-w-[38ch] text-[16px] leading-[1.75] text-[#A7B0BC] xl:text-[17px]">
+              <p className="mt-3.5 text-[21px] font-bold leading-[1.4] text-[#F4585E] xl:text-[23px]">
+                {content.hero.subheadline}
+              </p>
+            </div>
+
+            <p className="mt-4 max-w-[39ch] text-[16px] leading-[1.75] text-[#B7C0CC] xl:text-[17px]">
               {content.hero.description}
             </p>
 
@@ -108,7 +141,7 @@ export function HeroSection({ content }: HeroSectionProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[48px] items-center justify-center gap-2.5 rounded-[10px] bg-[#B51219] px-6 text-[15px] font-bold text-white shadow-[0_12px_28px_-6px_rgba(181,18,25,0.6)] transition-colors hover:bg-[#9B0F15]"
+                className="inline-flex min-h-[50px] items-center justify-center gap-2.5 rounded-[10px] border border-[#D4B27A]/35 bg-gradient-to-b from-[#CF1921] via-[#B51219] to-[#870B10] px-6 text-[15px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_14px_30px_-6px_rgba(181,18,25,0.68)] transition-all hover:brightness-110"
               >
                 <WhatsAppIcon className="h-[18px] w-[18px]" />
                 <span>{content.hero.primaryCta}</span>
@@ -116,69 +149,102 @@ export function HeroSection({ content }: HeroSectionProps) {
 
               <a
                 href="#services"
-                className="inline-flex min-h-[48px] items-center justify-center gap-1.5 rounded-[10px] border border-white/34 bg-[#151F2B]/65 px-5 text-[15px] font-bold text-[#F5F6F7] transition-colors hover:border-white/55 hover:bg-[#192533]"
+                className="inline-flex min-h-[50px] items-center justify-center gap-1.5 rounded-[10px] border border-[#D4B27A]/35 bg-[#151F2B]/80 px-5 text-[15px] font-bold text-[#F5F6F7] transition-colors hover:border-[#D4B27A]/65 hover:bg-[#192533]"
               >
                 <span>{content.hero.secondaryCta}</span>
-                <SecondaryChevron className="h-4 w-4 text-[#F4585E]" strokeWidth={2} aria-hidden="true" />
+                <SecondaryChevron className="h-4 w-4 text-[#D4B27A]" strokeWidth={2} aria-hidden="true" />
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ================= MOBILE / TABLET HERO (< 1024px) ================= */}
-      {/* Uncluttered refined Concept A: sharp yard panorama (gate + trucks + flag) -> diagonal crimson transition -> deep dark panel */}
+      {/* ================= MOBILE / TABLET HERO (< 1024px) — PRIORITY #1 ================= */}
       <div className="relative bg-[#0B0F14] lg:hidden">
-        {/* Prominent Edge-to-Edge Al-Awja Yard Photo (natural tone + crisp framing of gate, trucks & flag) */}
-        <div className="relative h-[255px] w-full overflow-hidden min-[390px]:h-[272px] min-[430px]:h-[292px] sm:h-[340px] md:h-[380px]">
+        {/* Vivid, Unmuddied Al-Awja Panoramic Stage (Flag, Gate Arch & Truck Convoy) */}
+        <div className="relative h-[272px] w-full overflow-hidden min-[390px]:h-[294px] min-[430px]:h-[314px] sm:h-[360px] md:h-[400px]">
           <Image
             src="/images/al-awja-yard.jpg"
             alt={content.hero.yardAlt}
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[66%_38%] brightness-[1.07] contrast-[1.06]"
+            className="object-cover object-[66%_38%] brightness-[1.12] contrast-[1.09] saturate-[1.08]"
           />
-          {/* Clean atmospheric header integration & subtle bottom twilight transition */}
+          {/* Scrim ONLY at top header join & very bottom seam so trucks & dusk horizon shine vividly */}
           <div
             aria-hidden="true"
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(11,15,20,0.4) 0%, transparent 24%), linear-gradient(to top, #0B0F14 2%, rgba(11,15,20,0.42) 28%, transparent 64%)",
+                "linear-gradient(to bottom, rgba(11,15,20,0.42) 0%, transparent 20%), linear-gradient(to top, #0B0F14 2%, rgba(11,15,20,0.26) 22%, transparent 48%)",
             }}
           />
         </div>
 
-        {/* Multi-Plane Diagonal Crimson Geometric Transition */}
-        <div className="relative z-10 -mt-11">
+        {/* Sculpted Multi-Plane Diagonal Crimson + Champagne Gold Bevel Transition */}
+        <div className="relative z-10 -mt-12">
           <svg
-            viewBox="0 0 390 48"
+            viewBox="0 0 390 56"
             preserveAspectRatio="none"
             aria-hidden="true"
-            className={`block h-[48px] w-full ${isRtl ? "" : "-scale-x-100"}`}
+            className={`block h-[56px] w-full ${isRtl ? "" : "-scale-x-100"}`}
           >
-            {/* Translucent crimson architectural wing */}
-            <polygon points="0,30 390,0 390,14 0,44" fill="rgba(181, 18, 25, 0.34)" />
-            {/* Crisp crimson geometric ridge */}
-            <polygon points="0,38 390,8 390,14 0,44" fill="#B51219" />
-            {/* Connected dark stage edge */}
-            <polygon points="0,44 390,14 390,48 0,48" fill="#0B0F14" />
+            <defs>
+              <linearGradient id="mobileRubyGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(181, 18, 25, 0.25)" />
+                <stop offset="100%" stopColor="rgba(181, 18, 25, 0.55)" />
+              </linearGradient>
+              <linearGradient id="mobileGoldEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(212, 178, 122, 0.45)" />
+                <stop offset="65%" stopColor="rgba(212, 178, 122, 0.95)" />
+                <stop offset="100%" stopColor="rgba(212, 178, 122, 0.7)" />
+              </linearGradient>
+            </defs>
+            {/* Ruby atmospheric wing */}
+            <polygon points="0,33 390,0 390,15 0,48" fill="url(#mobileRubyGlow)" />
+            {/* 1.5px Champagne Gold architectural specular edge */}
+            <polygon points="0,41 390,8 390,10 0,43" fill="url(#mobileGoldEdge)" />
+            {/* Lacquered Crimson ridge */}
+            <polygon points="0,43 390,10 390,18 0,51" fill="#B51219" />
+            {/* Dark stage anchor */}
+            <polygon points="0,50 390,17 390,56 0,56" fill="#0B0F14" />
           </svg>
         </div>
 
-        {/* Connected Deep-Charcoal Content Stage */}
+        {/* Elevated Luxury Content Stage */}
         <div
-          className="relative px-4 pb-10 pt-2 min-[390px]:px-5 sm:px-6 sm:pb-12"
+          className="relative overflow-hidden px-4 pb-10 pt-1 min-[390px]:px-5 sm:px-6 sm:pb-12"
           style={{
             background: isRtl
-              ? "radial-gradient(320px circle at 92% 8%, rgba(181, 18, 25, 0.16), transparent 72%)"
-              : "radial-gradient(320px circle at 8% 8%, rgba(181, 18, 25, 0.16), transparent 72%)",
+              ? "radial-gradient(360px circle at 92% 4%, rgba(181, 18, 25, 0.24), transparent 66%), radial-gradient(240px circle at 10% 35%, rgba(212, 178, 122, 0.06), transparent 70%), linear-gradient(180deg, #0B0F14 0%, #101721 100%)"
+              : "radial-gradient(360px circle at 8% 4%, rgba(181, 18, 25, 0.24), transparent 66%), radial-gradient(240px circle at 90% 35%, rgba(212, 178, 122, 0.06), transparent 70%), linear-gradient(180deg, #0B0F14 0%, #101721 100%)",
           }}
         >
-          <div className="mx-auto max-w-[640px]">
-            <div className="border-s-[3px] border-[#B51219] ps-3.5">
-              <h1 className="text-[30px] font-extrabold leading-[1.2] text-[#F5F6F7] min-[390px]:text-[32px] min-[430px]:text-[34px] sm:text-[38px]">
+          {/* Subtle architectural grid watermark */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, rgba(212,178,122,0.032) 1px, transparent 1px), linear-gradient(to bottom, rgba(212,178,122,0.032) 1px, transparent 1px)",
+              backgroundSize: "32px 32px",
+              maskImage: "linear-gradient(to bottom, black 10%, transparent 85%)",
+              WebkitMaskImage: "linear-gradient(to bottom, black 10%, transparent 85%)",
+            }}
+          />
+
+          <div className="relative z-10 mx-auto max-w-[640px]">
+            {/* Factual Champagne-Gold Multi-Port Authority Pill */}
+            <div className="mb-3.5 inline-flex max-w-full items-center gap-2 rounded-full border border-[#D4B27A]/30 bg-[#151F2B]/85 px-3 py-1 backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#D4B27A]" aria-hidden="true" />
+              <span className="truncate text-[11.5px] font-semibold text-[#D4B27A] min-[390px]:text-[12px]">
+                {content.hero.portsLine}
+              </span>
+            </div>
+
+            <div className="relative ps-3.5 before:absolute before:inset-y-1 before:start-0 before:w-[3px] before:rounded-full before:bg-gradient-to-b before:from-[#D4B27A] before:via-[#B51219] before:to-[#B51219]/30">
+              <h1 className="text-[31px] font-extrabold leading-[1.18] text-[#F5F6F7] min-[390px]:text-[33px] min-[430px]:text-[35px] sm:text-[38px]">
                 <span className="block">{content.hero.headlineLine1}</span>
                 <span className="mt-0.5 block">{content.hero.headlineLine2}</span>
               </h1>
@@ -188,7 +254,7 @@ export function HeroSection({ content }: HeroSectionProps) {
               </p>
             </div>
 
-            <p className="mt-4 max-w-[40ch] text-[15px] leading-[1.75] text-[#A7B0BC] sm:text-[16px]">
+            <p className="mt-3.5 max-w-[40ch] text-[15px] leading-[1.75] text-[#B7C0CC] sm:text-[16px]">
               {content.hero.description}
             </p>
 
@@ -197,7 +263,7 @@ export function HeroSection({ content }: HeroSectionProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[10px] bg-[#B51219] px-5 text-[15px] font-bold text-white shadow-[0_10px_24px_-6px_rgba(181,18,25,0.6)] transition-colors hover:bg-[#9B0F15] sm:w-auto sm:flex-1"
+                className="inline-flex min-h-[50px] w-full items-center justify-center gap-2 rounded-[10px] border border-[#D4B27A]/35 bg-gradient-to-b from-[#CF1921] via-[#B51219] to-[#870B10] px-5 text-[15px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_14px_28px_-6px_rgba(181,18,25,0.7)] transition-all hover:brightness-110 sm:w-auto sm:flex-1"
               >
                 <WhatsAppIcon className="h-[18px] w-[18px]" />
                 <span>{content.hero.primaryCta}</span>
@@ -205,10 +271,10 @@ export function HeroSection({ content }: HeroSectionProps) {
 
               <a
                 href="#services"
-                className="inline-flex min-h-[48px] w-full items-center justify-center gap-1.5 rounded-[10px] border border-white/34 bg-[#151F2B]/80 px-5 text-[15px] font-bold text-[#F5F6F7] transition-colors hover:border-white/55 hover:bg-[#192533] sm:w-auto sm:flex-1"
+                className="inline-flex min-h-[50px] w-full items-center justify-center gap-1.5 rounded-[10px] border border-[#D4B27A]/35 bg-[#151F2B]/90 px-5 text-[15px] font-bold text-[#F5F6F7] transition-colors hover:border-[#D4B27A]/65 hover:bg-[#192533] sm:w-auto sm:flex-1"
               >
                 <span>{content.hero.secondaryCta}</span>
-                <SecondaryChevron className="h-4 w-4 text-[#F4585E]" strokeWidth={2} aria-hidden="true" />
+                <SecondaryChevron className="h-4 w-4 text-[#D4B27A]" strokeWidth={2} aria-hidden="true" />
               </a>
             </div>
           </div>

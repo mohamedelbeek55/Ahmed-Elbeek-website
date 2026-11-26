@@ -54,8 +54,8 @@ export function LocationsSection({ content }: LocationsSectionProps) {
                 <span
                   className={`absolute bottom-3 start-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[12px] font-bold shadow ${
                     loc.featured
-                      ? "bg-[#B51219] text-white"
-                      : "border border-white/20 bg-[#0B0F14]/85 text-[#F5F6F7] backdrop-blur-sm"
+                      ? "border border-[#D4B27A]/40 bg-gradient-to-b from-[#CF1921] to-[#980D13] text-white"
+                      : "border border-[#D4B27A]/35 bg-[#0B0F14]/88 text-[#D4B27A] backdrop-blur-sm"
                   }`}
                 >
                   <MapPin className="h-3.5 w-3.5 shrink-0" strokeWidth={2} aria-hidden="true" />

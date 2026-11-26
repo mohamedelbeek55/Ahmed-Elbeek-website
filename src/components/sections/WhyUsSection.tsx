@@ -33,7 +33,7 @@ export function WhyUsSection({ content }: WhyUsSectionProps) {
     >
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3">
-          <span className="h-7 w-1 rounded-full bg-[#B51219]" aria-hidden="true" />
+          <span className="h-7 w-1 rounded-full bg-gradient-to-b from-[#D4B27A] to-[#B51219]" aria-hidden="true" />
           <h2
             id="why-us-heading"
             className="text-[26px] font-extrabold leading-[1.25] text-[#F5F6F7] sm:text-[32px]"

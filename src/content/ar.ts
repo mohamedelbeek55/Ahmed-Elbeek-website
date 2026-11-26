@@ -31,6 +31,7 @@ export const arContent: SiteContent = {
     skipToContent: "تخطي إلى المحتوى الرئيسي",
   },
   hero: {
+    portsLine: "منفذ العوجة البري  |  ميناء الإسكندرية  |  ميناء دمياط",
     headlineLine1: "أحمد البيك",
     headlineLine2: "للاستيراد والتصدير",
     subheadline: "خدمات تجارية.. ومتابعة لكل التفاصيل.",

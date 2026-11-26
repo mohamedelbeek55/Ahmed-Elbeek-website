@@ -31,6 +31,7 @@ export const enContent: SiteContent = {
     skipToContent: "Skip to main content",
   },
   hero: {
+    portsLine: "Al-Awja Land Port  |  Alexandria Port  |  Damietta Port",
     headlineLine1: "Ahmed Elbeek",
     headlineLine2: "Import & Export",
     subheadline: "Trade Services. Attention to Every Detail.",
