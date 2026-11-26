@@ -38,15 +38,15 @@ export function HeroSection({ content }: HeroSectionProps) {
             fill
             priority
             sizes="(min-width: 1024px) 66vw, 100vw"
-            className="object-cover object-[65%_42%] brightness-[1.11] contrast-[1.08] saturate-[1.08]"
+            className="object-cover object-[65%_42%] brightness-[1.24] contrast-[1.07] saturate-[1.1]"
           />
           <div
             aria-hidden="true"
             className="absolute inset-0"
             style={{
               background: isRtl
-                ? "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.12) 22%, transparent 45%), linear-gradient(to right, rgba(11,15,20,0.38) 0%, transparent 16%)"
-                : "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.12) 22%, transparent 45%), linear-gradient(to left, rgba(11,15,20,0.38) 0%, transparent 16%)",
+                ? "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.08) 18%, transparent 40%), linear-gradient(to right, rgba(11,15,20,0.32) 0%, transparent 14%)"
+                : "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.08) 18%, transparent 40%), linear-gradient(to left, rgba(11,15,20,0.32) 0%, transparent 14%)",
             }}
           />
         </div>
@@ -161,23 +161,23 @@ export function HeroSection({ content }: HeroSectionProps) {
 
       {/* ================= MOBILE / TABLET HERO (< 1024px) — PRIORITY #1 ================= */}
       <div className="relative bg-[#0B0F14] lg:hidden">
-        {/* Vivid, Unmuddied Al-Awja Panoramic Stage (Flag, Gate Arch & Truck Convoy) */}
-        <div className="relative h-[272px] w-full overflow-hidden min-[390px]:h-[294px] min-[430px]:h-[314px] sm:h-[360px] md:h-[400px]">
+        {/* Vivid, Taller Al-Awja Panoramic Stage (Flag, Gate Arch & Truck Convoy) */}
+        <div className="relative h-[274px] w-full overflow-hidden min-[390px]:h-[308px] min-[430px]:h-[346px] sm:h-[385px] md:h-[420px]">
           <Image
             src="/images/al-awja-yard.jpg"
             alt={content.hero.yardAlt}
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[66%_38%] brightness-[1.12] contrast-[1.09] saturate-[1.08]"
+            className="object-cover object-[64%_38%] brightness-[1.25] contrast-[1.07] saturate-[1.1]"
           />
-          {/* Scrim ONLY at top header join & very bottom seam so trucks & dusk horizon shine vividly */}
+          {/* Minimal edge blending only at top header join & bottom diagonal edge */}
           <div
             aria-hidden="true"
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(11,15,20,0.42) 0%, transparent 20%), linear-gradient(to top, #0B0F14 2%, rgba(11,15,20,0.26) 22%, transparent 48%)",
+                "linear-gradient(to bottom, rgba(11,15,20,0.28) 0%, transparent 16%), linear-gradient(to top, #0B0F14 1%, rgba(11,15,20,0.18) 18%, transparent 40%)",
             }}
           />
         </div>
@@ -236,7 +236,7 @@ export function HeroSection({ content }: HeroSectionProps) {
 
           <div className="relative z-10 mx-auto max-w-[640px]">
             {/* Factual Champagne-Gold Multi-Port Authority Pill */}
-            <div className="mb-3.5 inline-flex max-w-full items-center gap-2 rounded-full border border-[#D4B27A]/30 bg-[#151F2B]/85 px-3 py-1 backdrop-blur-sm">
+            <div className="mb-2.5 inline-flex max-w-full items-center gap-2 rounded-full border border-[#D4B27A]/30 bg-[#151F2B]/85 px-3 py-1 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#D4B27A]" aria-hidden="true" />
               <span className="truncate text-[11.5px] font-semibold text-[#D4B27A] min-[390px]:text-[12px]">
                 {content.hero.portsLine}
@@ -244,26 +244,26 @@ export function HeroSection({ content }: HeroSectionProps) {
             </div>
 
             <div className="relative ps-3.5 before:absolute before:inset-y-1 before:start-0 before:w-[3px] before:rounded-full before:bg-gradient-to-b before:from-[#D4B27A] before:via-[#B51219] before:to-[#B51219]/30">
-              <h1 className="text-[31px] font-extrabold leading-[1.18] text-[#F5F6F7] min-[390px]:text-[33px] min-[430px]:text-[35px] sm:text-[38px]">
+              <h1 className="text-[30px] font-extrabold leading-[1.16] text-[#F5F6F7] min-[390px]:text-[32px] min-[430px]:text-[34px] sm:text-[38px]">
                 <span className="block">{content.hero.headlineLine1}</span>
                 <span className="mt-0.5 block">{content.hero.headlineLine2}</span>
               </h1>
 
-              <p className="mt-2.5 text-balance text-[17.5px] font-bold leading-[1.4] text-[#F4585E] min-[390px]:text-[18.5px] sm:text-[20px]">
+              <p className="mt-2 text-balance text-[17px] font-bold leading-[1.36] text-[#F4585E] min-[390px]:text-[18px] sm:text-[20px]">
                 {content.hero.subheadline}
               </p>
             </div>
 
-            <p className="mt-3.5 max-w-[40ch] text-[15px] leading-[1.75] text-[#B7C0CC] sm:text-[16px]">
+            <p className="mt-3 max-w-[40ch] text-[14.5px] leading-[1.7] text-[#B7C0CC] min-[390px]:text-[15px] sm:text-[16px]">
               {content.hero.description}
             </p>
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:gap-3">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[50px] w-full items-center justify-center gap-2 rounded-[10px] border border-[#D4B27A]/35 bg-gradient-to-b from-[#CF1921] via-[#B51219] to-[#870B10] px-5 text-[15px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_14px_28px_-6px_rgba(181,18,25,0.7)] transition-all hover:brightness-110 sm:w-auto sm:flex-1"
+                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[10px] border border-[#D4B27A]/35 bg-gradient-to-b from-[#CF1921] via-[#B51219] to-[#870B10] px-5 text-[15px] font-bold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_14px_28px_-6px_rgba(181,18,25,0.7)] transition-all hover:brightness-110 sm:w-auto sm:flex-1"
               >
                 <WhatsAppIcon className="h-[18px] w-[18px]" />
                 <span>{content.hero.primaryCta}</span>
@@ -271,7 +271,7 @@ export function HeroSection({ content }: HeroSectionProps) {
 
               <a
                 href="#services"
-                className="inline-flex min-h-[50px] w-full items-center justify-center gap-1.5 rounded-[10px] border border-[#D4B27A]/35 bg-[#151F2B]/90 px-5 text-[15px] font-bold text-[#F5F6F7] transition-colors hover:border-[#D4B27A]/65 hover:bg-[#192533] sm:w-auto sm:flex-1"
+                className="inline-flex min-h-[48px] w-full items-center justify-center gap-1.5 rounded-[10px] border border-[#D4B27A]/35 bg-[#151F2B]/90 px-5 text-[15px] font-bold text-[#F5F6F7] transition-colors hover:border-[#D4B27A]/65 hover:bg-[#192533] sm:w-auto sm:flex-1"
               >
                 <span>{content.hero.secondaryCta}</span>
                 <SecondaryChevron className="h-4 w-4 text-[#D4B27A]" strokeWidth={2} aria-hidden="true" />

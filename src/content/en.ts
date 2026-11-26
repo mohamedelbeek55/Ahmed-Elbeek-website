@@ -34,9 +34,9 @@ export const enContent: SiteContent = {
     portsLine: "Al-Awja Land Port  |  Alexandria Port  |  Damietta Port",
     headlineLine1: "Ahmed Elbeek",
     headlineLine2: "Import & Export",
-    subheadline: "Trade Services. Attention to Every Detail.",
+    subheadline: "Trade Services. Every Detail Followed.",
     description:
-      "Delivering import, export, customs clearance, and cargo transport coordination across Al-Awja, Damietta, and Alexandria ports with dedicated follow-up on every shipment.",
+      "Import, export, customs clearance, and cargo transport coordination across Al-Awja, Damietta, and Alexandria ports with dedicated follow-up.",
     primaryCta: "Contact via WhatsApp",
     secondaryCta: "Explore Services",
     yardAlt: "Twilight view of Al-Awja Land Port yard with cargo trucks and the Egyptian flag",
