@@ -24,12 +24,11 @@ export interface LocationItem {
   featured?: boolean;
 }
 
-export interface WorkSlotItem {
+export interface WorkPhotoItem {
   id: string;
-  icon: "loading" | "truck" | "cargo" | "operations";
-  title: string;
-  description: string;
-  tag: string;
+  src: string;
+  alt: string;
+  objectPosition?: string;
 }
 
 export interface WhyUsItem {
@@ -95,8 +94,13 @@ export interface SiteContent {
     eyebrow: string;
     heading: string;
     description: string;
-    slots: WorkSlotItem[];
-    fieldNote: string;
+    photos: WorkPhotoItem[];
+    lightbox: {
+      openLabel: string;
+      closeLabel: string;
+      prevLabel: string;
+      nextLabel: string;
+    };
   };
   whyUs: {
     eyebrow: string;

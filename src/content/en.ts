@@ -133,41 +133,35 @@ export const enContent: SiteContent = {
   },
   ourWork: {
     eyebrow: "Our Work",
-    heading: "Field Coordination Across Loading & Cargo Movement.",
+    heading: "Real Snapshots from Our Field Operations.",
     description:
-      "Structured to showcase active truck loading, fully dispatched freight, varied commercial cargo types, and day-to-day operational supervision.",
-    slots: [
+      "Live scenes of truck staging, cargo loading, and fully loaded dispatches ready for port transit.",
+    photos: [
       {
-        id: "loading-trucks",
-        icon: "loading",
-        title: "Trucks During Loading",
-        description: "Organizing truck staging and monitoring cargo arrangement throughout loading operations.",
-        tag: "Loading Stage",
+        id: "work-loading-flatbed",
+        src: "/images/operations/٨-600x600.webp",
+        alt: "Heavy transport flatbed truck during forklift loading of boxed cargo",
+        objectPosition: "50% 50%",
       },
       {
-        id: "loaded-trucks",
-        icon: "truck",
-        title: "Fully Loaded Trucks",
-        description: "Verifying load readiness and shipment documentation prior to departure toward the port.",
-        tag: "Dispatch Ready",
+        id: "work-industrial-rolls",
+        src: "/images/operations/١١-600x600.webp",
+        alt: "Transport trucks loaded with wrapped industrial rolls and covered cargo",
+        objectPosition: "50% 50%",
       },
       {
-        id: "diverse-cargo",
-        icon: "cargo",
-        title: "Diverse Cargo Types",
-        description: "Coordinating varied commercial goods tailored to the handling needs of each shipment.",
-        tag: "Cargo Variety",
-      },
-      {
-        id: "field-operations",
-        icon: "operations",
-        title: "Live Field Operations",
-        description: "On-ground coordination of paperwork, port entries, and stage-by-stage execution.",
-        tag: "Field Execution",
+        id: "work-palletized-cargo",
+        src: "/images/operations/١٣-600x600.webp",
+        alt: "Fully loaded trailer carrying wrapped palletized cargo in the loading yard",
+        objectPosition: "50% 50%",
       },
     ],
-    fieldNote:
-      "Authentic field photographs of company loading and transport operations will populate these gallery slots as published.",
+    lightbox: {
+      openLabel: "View photo full size",
+      closeLabel: "Close photo viewer",
+      prevLabel: "Previous photo",
+      nextLabel: "Next photo",
+    },
   },
   whyUs: {
     eyebrow: "Why Us",
