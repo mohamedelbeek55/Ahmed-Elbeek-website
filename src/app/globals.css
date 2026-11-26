@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #0b0f14;
+  --bg-secondary: #121b26;
+  --bg-card: #151f2b;
+  --bg-elevated: #192533;
+  --brand-red: #b51219;
+  --brand-red-hover: #9b0f15;
+  --brand-red-glow: rgba(181, 18, 25, 0.16);
+  --text-red-accent: #f4585e;
+  --text-primary: #f5f6f7;
+  --text-secondary: #a7b0bc;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-interactive: rgba(255, 255, 255, 0.34);
+  --surface-logo-plaque: #fdfdfd;
+}
+
+html {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[lang="ar"] body,
+[data-locale="ar"] {
+  font-family: var(--font-cairo), "Cairo", "Segoe UI", Tahoma, sans-serif;
+  letter-spacing: 0;
+}
+
+html[lang="en"] body,
+[data-locale="en"] {
+  font-family: var(--font-jakarta), "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid #f5f6f7;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
