@@ -81,8 +81,18 @@ export function HeroSection({ content }: HeroSectionProps) {
           className="pointer-events-none absolute inset-0 z-10"
           style={{
             background: isRtl
-              ? "radial-gradient(540px circle at 84% 82%, rgba(181, 18, 25, 0.18), transparent 68%)"
-              : "radial-gradient(540px circle at 16% 82%, rgba(181, 18, 25, 0.18), transparent 68%)",
+              ? "radial-gradient(540px circle at 84% 82%, rgba(181, 18, 25, 0.1), transparent 68%)"
+              : "radial-gradient(540px circle at 16% 82%, rgba(181, 18, 25, 0.1), transparent 68%)",
+          }}
+        />
+
+        {/* Bottom dissolve: photo + blade melt into the page instead of ending on a hard edge */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-[15] h-32"
+          style={{
+            background:
+              "linear-gradient(to top, #0B0F14 0%, rgba(11,15,20,0.88) 30%, rgba(11,15,20,0.4) 65%, transparent 100%)",
           }}
         />
 
@@ -108,7 +118,7 @@ export function HeroSection({ content }: HeroSectionProps) {
                 <span className="mt-1 block">{content.hero.headlineLine2}</span>
               </h1>
 
-              <p className="mt-3.5 text-[21px] font-bold leading-[1.4] text-[#F4585E] xl:text-[23px]">
+              <p className="mt-3.5 text-[21px] font-bold leading-[1.4] text-[#D4B27A] xl:text-[23px]">
                 {content.hero.subheadline}
               </p>
             </div>
@@ -184,8 +194,8 @@ export function HeroSection({ content }: HeroSectionProps) {
           className="relative px-4 pb-8 pt-0.5 min-[390px]:px-5 sm:px-6 sm:pb-10"
           style={{
             background: isRtl
-              ? "radial-gradient(340px circle at 92% 6%, rgba(181, 18, 25, 0.2), transparent 68%)"
-              : "radial-gradient(340px circle at 8% 6%, rgba(181, 18, 25, 0.2), transparent 68%)",
+              ? "radial-gradient(340px circle at 92% 6%, rgba(181, 18, 25, 0.12), transparent 68%)"
+              : "radial-gradient(340px circle at 8% 6%, rgba(181, 18, 25, 0.12), transparent 68%)",
           }}
         >
           <div className="mx-auto max-w-[640px]">
@@ -208,7 +218,7 @@ export function HeroSection({ content }: HeroSectionProps) {
                 <span className="mt-0.5 block">{content.hero.headlineLine2}</span>
               </h1>
 
-              <p className="mt-1.5 text-balance text-[16px] font-bold leading-[1.35] text-[#F4585E] min-[390px]:text-[18px] sm:text-[20px]">
+              <p className="mt-1.5 text-balance text-[16px] font-bold leading-[1.35] text-[#D4B27A] min-[390px]:text-[18px] sm:text-[20px]">
                 {content.hero.subheadline}
               </p>
             </div>

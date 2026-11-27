@@ -158,7 +158,7 @@ export function MobileDrawer({
         </nav>
 
         <div className="space-y-2.5 border-t border-white/10 bg-[#0B0F14]/80 p-4">
-          <p className="text-[13px] font-bold text-[#F4585E]">
+          <p className="text-[13px] font-bold text-[#D4B27A]">
             {content.header.directContactHeading}
           </p>
 
@@ -192,7 +192,7 @@ export function MobileDrawer({
               }
               className="flex min-h-[44px] items-center justify-center gap-1.5 rounded-[10px] border border-white/15 bg-[#151F2B] px-2 text-[13px] font-semibold text-[#F5F6F7] tabular-nums transition-colors hover:bg-[#192533]"
             >
-              <Phone className="h-3.5 w-3.5 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+              <Phone className="h-3.5 w-3.5 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
               <bdi dir="ltr">{COMPANY_CONTACT.primaryPhoneDisplay}</bdi>
             </a>
             <a
@@ -207,7 +207,7 @@ export function MobileDrawer({
               }
               className="flex min-h-[44px] items-center justify-center gap-1.5 rounded-[10px] border border-white/15 bg-[#151F2B] px-2 text-[13px] font-semibold text-[#F5F6F7] tabular-nums transition-colors hover:bg-[#192533]"
             >
-              <Phone className="h-3.5 w-3.5 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+              <Phone className="h-3.5 w-3.5 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
               <bdi dir="ltr">{COMPANY_CONTACT.secondaryPhoneDisplay}</bdi>
             </a>
           </div>
@@ -224,7 +224,7 @@ export function MobileDrawer({
             }
             className="flex min-h-[44px] items-center justify-center gap-2 rounded-[10px] border border-white/10 bg-[#151F2B]/70 px-3 text-[13px] font-medium text-[#A7B0BC] transition-colors hover:text-[#F5F6F7]"
           >
-            <Mail className="h-4 w-4 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+            <Mail className="h-4 w-4 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
             <bdi dir="ltr">{COMPANY_CONTACT.email}</bdi>
           </a>
 

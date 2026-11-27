@@ -7,7 +7,7 @@ interface TrustStripProps {
 
 function TrustIcon({ icon }: { icon: TrustItem["icon"] }) {
   const props = {
-    className: "h-5 w-5 text-[#F4585E]",
+    className: "h-5 w-5 text-[#D4B27A]",
     strokeWidth: 1.75,
     "aria-hidden": true as const,
   };
@@ -24,27 +24,31 @@ function TrustIcon({ icon }: { icon: TrustItem["icon"] }) {
   }
 }
 
+/**
+ * Slim single-band trust strip (no per-item boxes).
+ * Mobile: compact 2x2 (titles only). Desktop: 4 columns separated by hairlines.
+ */
 export function TrustStrip({ content }: TrustStripProps) {
   return (
     <section
       aria-label={content.trustStrip.ariaLabel}
-      className="border-t border-white/10 bg-[#0F1620] py-5 sm:py-6"
+      className="border-b border-white/10 bg-[#0B0F14]"
     >
-      <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
-        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+      <div className="mx-auto max-w-[1380px] px-4 pb-5 pt-1 min-[390px]:px-5 sm:px-6 sm:pb-6 sm:pt-2 lg:px-8">
+        <ul className="grid grid-cols-2 gap-x-3 gap-y-4 lg:grid-cols-4 lg:gap-0">
           {content.trustStrip.items.map((item) => (
             <li
               key={item.id}
-              className="flex items-center gap-3.5 rounded-[12px] border border-white/10 bg-[#151F2B]/80 px-4 py-3.5"
+              className="flex items-center gap-2.5 sm:gap-3.5 lg:border-s lg:border-white/10 lg:ps-6 lg:first:border-s-0 lg:first:ps-0"
             >
-              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] border border-[#D4B27A]/25 bg-[#0B0F14]/80">
+              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#D4B27A]/30 sm:h-10 sm:w-10">
                 <TrustIcon icon={item.icon} />
               </span>
               <div className="min-w-0">
-                <p className="text-[14.5px] font-bold leading-snug text-[#F5F6F7]">
+                <p className="text-[13.5px] font-bold leading-snug text-[#F5F6F7] sm:text-[14.5px]">
                   {item.title}
                 </p>
-                <p className="mt-0.5 text-[12.5px] leading-snug text-[#A7B0BC]">
+                <p className="mt-0.5 hidden text-[12.5px] leading-snug text-[#A7B0BC] sm:block">
                   {item.subtitle}
                 </p>
               </div>

@@ -91,7 +91,7 @@ export function ShareSaveActions({
           </>
         ) : (
           <>
-            <Share2 className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+            <Share2 className="h-4 w-4 shrink-0 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
             <span>{shareLabel}</span>
           </>
         )}

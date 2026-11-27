@@ -110,7 +110,7 @@ export function Header({ content }: HeaderProps) {
                   aria-current={isActive ? "true" : undefined}
                   className={`relative inline-flex min-h-[44px] items-center text-[13.5px] font-semibold whitespace-nowrap transition-colors xl:text-[14.5px] ${
                     isActive
-                      ? "text-[#F5F6F7] after:absolute after:inset-x-0 after:bottom-1 after:h-[2px] after:rounded-full after:bg-gradient-to-r after:from-[#D4B27A] after:to-[#B51219]"
+                      ? "text-[#F5F6F7] after:absolute after:inset-x-0 after:bottom-1 after:h-[2px] after:rounded-full after:bg-[#D4B27A]"
                       : "text-[#A7B0BC] hover:text-[#F5F6F7]"
                   }`}
                 >

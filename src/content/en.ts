@@ -15,11 +15,11 @@ export const enContent: SiteContent = {
   },
   nav: [
     { id: "hero", label: "Home", href: "#hero" },
+    { id: "our-work", label: "Our Work", href: "#our-work" },
     { id: "about", label: "About", href: "#about" },
     { id: "services", label: "Services", href: "#services" },
     { id: "process", label: "How We Work", href: "#process" },
     { id: "locations", label: "Locations", href: "#locations" },
-    { id: "our-work", label: "Our Work", href: "#our-work" },
     { id: "why-us", label: "Why Us", href: "#why-us" },
     { id: "contact", label: "Contact", href: "#contact" },
   ],
@@ -73,7 +73,7 @@ export const enContent: SiteContent = {
   },
   about: {
     eyebrow: "About Us",
-    heading: "A practical trade partner for organized import, export, and customs execution.",
+    heading: "A practical trade partner for organized import, export, and customs execution",
     paragraphs: [
       "Ahmed Elbeek Import & Export provides coordinated commercial trade services across key Egyptian land and maritime ports, with a clear focus on procedural accuracy and smooth cargo movement.",
       "From initial shipment scheduling and documentation review through customs clearance and inland dispatch, every operation receives direct, responsive follow-up.",
@@ -95,7 +95,7 @@ export const enContent: SiteContent = {
   },
   services: {
     eyebrow: "Our Services",
-    heading: "Integrated Solutions for Your Trade Operations.",
+    heading: "Integrated Solutions for Your Trade Operations",
     items: [
       {
         id: "import-export",
@@ -125,7 +125,7 @@ export const enContent: SiteContent = {
   },
   process: {
     eyebrow: "How We Work",
-    heading: "Four Clear Steps From Inquiry to Delivery.",
+    heading: "Four Clear Steps From Inquiry to Delivery",
     description:
       "A structured operational sequence designed to keep paperwork accurate and cargo moving without unnecessary delays.",
     steps: [
@@ -153,7 +153,7 @@ export const enContent: SiteContent = {
   },
   locations: {
     eyebrow: "Operating Locations",
-    heading: "Active Presence Across Key Gateways.",
+    heading: "Active Presence Across Key Gateways",
     description:
       "Operations are coordinated across major Egyptian land and sea ports, covering Al-Awja Land Port along with Alexandria, Damietta, Suez, and Nuweiba maritime ports.",
     items: [
@@ -205,7 +205,7 @@ export const enContent: SiteContent = {
   },
   ourWork: {
     eyebrow: "Our Work",
-    heading: "Real Snapshots from Our Field Operations.",
+    heading: "Real Snapshots from Our Field Operations",
     description:
       "Live scenes of truck staging, cargo loading, and fully loaded dispatches ready for port transit.",
     photos: [

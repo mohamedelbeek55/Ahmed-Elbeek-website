@@ -15,12 +15,12 @@ export function SectionHeader({
 }: SectionEyebrowProps) {
   return (
     <div className={maxWidthClass}>
-      <p className="text-[13px] font-bold text-[#F4585E] sm:text-[14px]">
+      <p className="text-[13px] font-bold tracking-normal text-[#D4B27A] sm:text-[14px]">
         {eyebrow}
       </p>
       <div
         aria-hidden="true"
-        className="mt-2 h-[2px] w-14 rounded-full bg-gradient-to-r from-[#D4B27A] to-[#B51219]"
+        className="mt-2 h-[2px] w-14 rounded-full bg-gradient-to-r from-[#D4B27A] to-[#D4B27A]/15"
       />
       <h2
         id={headingId}

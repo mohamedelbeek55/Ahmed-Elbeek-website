@@ -59,7 +59,7 @@ export function ContactSection({ content }: ContactSectionProps) {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="scroll-mt-20 bg-[#0B0F14] py-12 sm:py-16 lg:py-20"
+      className="scroll-mt-20 bg-[#101721] py-12 sm:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <RevealOnScroll>
@@ -67,8 +67,8 @@ export function ContactSection({ content }: ContactSectionProps) {
             className="relative overflow-hidden rounded-[18px] border border-white/10 bg-[#151F2B] p-6 sm:p-8 lg:p-10"
             style={{
               backgroundImage: isRtl
-                ? "radial-gradient(460px circle at 92% 18%, rgba(181, 18, 25, 0.2), transparent 70%)"
-                : "radial-gradient(460px circle at 8% 18%, rgba(181, 18, 25, 0.2), transparent 70%)",
+                ? "radial-gradient(460px circle at 92% 18%, rgba(212, 178, 122, 0.08), transparent 70%)"
+                : "radial-gradient(460px circle at 8% 18%, rgba(212, 178, 122, 0.08), transparent 70%)",
             }}
           >
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
@@ -81,7 +81,7 @@ export function ContactSection({ content }: ContactSectionProps) {
                 </h2>
                 <div
                   aria-hidden="true"
-                  className="mt-2.5 h-[2px] w-14 rounded-full bg-gradient-to-r from-[#D4B27A] to-[#B51219]"
+                  className="mt-2.5 h-[2px] w-14 rounded-full bg-gradient-to-r from-[#D4B27A] to-[#D4B27A]/15"
                 />
                 <p className="mt-3 text-[15px] leading-[1.7] text-[#A7B0BC] sm:text-[16px]">
                   {content.contact.description}
@@ -126,7 +126,7 @@ export function ContactSection({ content }: ContactSectionProps) {
                 className="flex min-h-[50px] items-center justify-between gap-3 rounded-[12px] border border-white/12 bg-[#121B26]/90 px-4 py-3 text-[#F5F6F7] transition-colors hover:border-white/30 hover:bg-[#192533]"
               >
                 <span className="inline-flex items-center gap-2.5 text-[14px] text-[#A7B0BC]">
-                  <Phone className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+                  <Phone className="h-4 w-4 shrink-0 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
                   <span>{content.contact.phoneLabel}</span>
                 </span>
                 <bdi dir="ltr" className="text-[15px] font-bold tabular-nums text-[#F5F6F7]">
@@ -146,7 +146,7 @@ export function ContactSection({ content }: ContactSectionProps) {
                 className="flex min-h-[50px] items-center justify-between gap-3 rounded-[12px] border border-white/12 bg-[#121B26]/90 px-4 py-3 text-[#F5F6F7] transition-colors hover:border-white/30 hover:bg-[#192533]"
               >
                 <span className="inline-flex items-center gap-2.5 text-[14px] text-[#A7B0BC]">
-                  <Phone className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+                  <Phone className="h-4 w-4 shrink-0 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
                   <span>{content.contact.phoneLabel}</span>
                 </span>
                 <bdi dir="ltr" className="text-[15px] font-bold tabular-nums text-[#F5F6F7]">
@@ -166,7 +166,7 @@ export function ContactSection({ content }: ContactSectionProps) {
                 className="flex min-h-[50px] min-w-0 items-center justify-between gap-3 rounded-[12px] border border-white/12 bg-[#121B26]/90 px-4 py-3 text-[#F5F6F7] transition-colors hover:border-white/30 hover:bg-[#192533] sm:col-span-2 lg:col-span-1"
               >
                 <span className="inline-flex shrink-0 items-center gap-2.5 text-[14px] text-[#A7B0BC]">
-                  <Mail className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+                  <Mail className="h-4 w-4 shrink-0 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
                   <span>{content.contact.emailLabel}</span>
                 </span>
                 <bdi dir="ltr" className="truncate text-[14.5px] font-semibold text-[#F5F6F7]">

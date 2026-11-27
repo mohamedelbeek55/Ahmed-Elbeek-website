@@ -9,7 +9,7 @@ interface WhyUsSectionProps {
 
 function WhyUsIcon({ icon }: { icon: WhyUsItem["icon"] }) {
   const props = {
-    className: "h-7 w-7 text-[#F4585E]",
+    className: "h-7 w-7 text-[#D4B27A]",
     strokeWidth: 1.65,
     "aria-hidden": true as const,
   };
@@ -31,7 +31,7 @@ export function WhyUsSection({ content }: WhyUsSectionProps) {
     <section
       id="why-us"
       aria-labelledby="why-us-heading"
-      className="scroll-mt-20 border-y border-white/10 bg-[#121B26] py-12 sm:py-16 lg:py-20"
+      className="scroll-mt-20 border-t border-white/10 bg-[#0B0F14] py-12 sm:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <RevealOnScroll>

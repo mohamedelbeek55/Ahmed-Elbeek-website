@@ -38,7 +38,7 @@ export function AboutSection({ content }: AboutSectionProps) {
                   <div key={pillar.label} className="p-5 sm:p-6">
                     <div className="flex items-center gap-2.5">
                       <span className="h-3.5 w-[3px] rounded-full bg-[#D4B27A]" aria-hidden="true" />
-                      <h3 className="text-[14px] font-bold text-[#F4585E]">
+                      <h3 className="text-[14px] font-bold text-[#D4B27A]">
                         {pillar.label}
                       </h3>
                     </div>

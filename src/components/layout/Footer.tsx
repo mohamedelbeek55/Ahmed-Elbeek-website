@@ -2,7 +2,6 @@ import { Mail, Phone } from "lucide-react";
 import { COMPANY_CONTACT, COMPANY_DETAILS } from "@/content/contact";
 import type { SiteContent } from "@/content/types";
 import { BrandLogo } from "@/components/ui/BrandLogo";
-import { LanguageSwitch } from "@/components/ui/LanguageSwitch";
 import { TrackedLink } from "@/components/ui/TrackedLink";
 
 interface FooterProps {
@@ -71,7 +70,7 @@ export function Footer({ content }: FooterProps) {
           </div>
 
           <div className="lg:col-span-4">
-            <h3 className="text-[14px] font-bold text-[#F4585E]">
+            <h3 className="text-[14px] font-bold text-[#D4B27A]">
               {content.footer.navigationTitle}
             </h3>
             <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1">
@@ -89,7 +88,7 @@ export function Footer({ content }: FooterProps) {
           </div>
 
           <div className="lg:col-span-3">
-            <h3 className="text-[14px] font-bold text-[#F4585E]">
+            <h3 className="text-[14px] font-bold text-[#D4B27A]">
               {content.footer.contactTitle}
             </h3>
             <ul className="mt-3 space-y-1 text-[14.5px]">
@@ -102,9 +101,9 @@ export function Footer({ content }: FooterProps) {
                     location: "footer",
                     target: COMPANY_CONTACT.primaryPhoneDisplay,
                   }}
-                  className="inline-flex min-h-[44px] items-center gap-2.5 text-[#F5F6F7] tabular-nums transition-colors hover:text-[#F4585E]"
+                  className="inline-flex min-h-[44px] items-center gap-2.5 text-[#F5F6F7] tabular-nums transition-colors hover:text-[#D4B27A]"
                 >
-                  <Phone className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+                  <Phone className="h-4 w-4 shrink-0 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
                   <bdi dir="ltr">{COMPANY_CONTACT.primaryPhoneDisplay}</bdi>
                 </TrackedLink>
               </li>
@@ -117,9 +116,9 @@ export function Footer({ content }: FooterProps) {
                     location: "footer",
                     target: COMPANY_CONTACT.secondaryPhoneDisplay,
                   }}
-                  className="inline-flex min-h-[44px] items-center gap-2.5 text-[#F5F6F7] tabular-nums transition-colors hover:text-[#F4585E]"
+                  className="inline-flex min-h-[44px] items-center gap-2.5 text-[#F5F6F7] tabular-nums transition-colors hover:text-[#D4B27A]"
                 >
-                  <Phone className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+                  <Phone className="h-4 w-4 shrink-0 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
                   <bdi dir="ltr">{COMPANY_CONTACT.secondaryPhoneDisplay}</bdi>
                 </TrackedLink>
               </li>
@@ -134,7 +133,7 @@ export function Footer({ content }: FooterProps) {
                   }}
                   className="inline-flex min-h-[44px] items-center gap-2.5 text-[#A7B0BC] transition-colors hover:text-[#F5F6F7]"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
+                  <Mail className="h-4 w-4 shrink-0 text-[#D4B27A]" strokeWidth={1.75} aria-hidden="true" />
                   <bdi dir="ltr">{COMPANY_CONTACT.email}</bdi>
                 </TrackedLink>
               </li>
@@ -142,16 +141,10 @@ export function Footer({ content }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center lg:pe-36">
+        <div className="mt-10 border-t border-white/10 pt-6 lg:pe-36">
           <p className="text-[13px] text-[#A7B0BC]">
             {content.footer.copyright}
           </p>
-
-          <LanguageSwitch
-            locale={content.locale}
-            label={content.header.switchLabel}
-            surfaceClassName="bg-[#151F2B]"
-          />
         </div>
       </div>
     </footer>

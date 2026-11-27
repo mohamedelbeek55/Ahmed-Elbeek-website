@@ -9,8 +9,9 @@ interface BrandLogoProps {
 }
 
 /**
- * Architectural white crest plaque framing the unmodified 1254x1254 master PNG,
- * accented with restrained ruby & champagne-gold trim.
+ * Transparent vector brand logo system:
+ * - Header: crisp globe mark SVG directly on dark surface next to bilingual live HTML title/subtitle
+ * - Footer: full stacked dark-mode SVG lockup cleanly sized without opaque plaque backing
  */
 export function BrandLogo({
   title,
@@ -21,35 +22,15 @@ export function BrandLogo({
 }: BrandLogoProps) {
   if (variant === "footer") {
     return (
-      <div className="flex items-center gap-4">
-        <div className="relative flex h-24 w-24 shrink-0 flex-col items-center justify-center overflow-hidden rounded-[16px] border border-[#D4B27A]/35 bg-[#FDFDFD] p-1.5 shadow-[0_14px_34px_rgba(0,0,0,0.55)] sm:h-[108px] sm:w-[108px]">
-          <Image
-            src="/images/Ahmed Elbeek Global Trade Logo.png"
-            alt={alt}
-            width={1254}
-            height={1254}
-            sizes="112px"
-            className="h-full w-full object-contain"
-          />
-          <span
-            aria-hidden="true"
-            className="absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-[#B51219] via-[#D4B27A] to-[#B51219]"
-          />
-        </div>
-        <div className="min-w-0">
-          <p className="text-[19px] font-extrabold leading-snug text-[#F5F6F7] sm:text-[21px]">
-            {title}
-          </p>
-          <p
-            className={`mt-0.5 font-semibold text-[#D4B27A] ${
-              locale === "ar"
-                ? "text-[14px]"
-                : "text-[12.5px] uppercase tracking-[0.08em]"
-            }`}
-          >
-            {subtitle}
-          </p>
-        </div>
+      <div className="inline-block max-w-full">
+        <Image
+          src="/logo/logo-full-dark.svg"
+          alt={alt}
+          width={180}
+          height={139}
+          unoptimized
+          className="h-auto w-[160px] object-contain sm:w-[180px]"
+        />
       </div>
     );
   }
@@ -57,23 +38,17 @@ export function BrandLogo({
   return (
     <a
       href="#hero"
-      className="group inline-flex min-h-[44px] min-w-0 items-center gap-2.5 rounded-[12px] border border-[#D4B27A]/22 bg-[#151F2B]/92 p-1 pe-3 shadow-[0_6px_20px_rgba(0,0,0,0.45)] transition-colors duration-200 hover:border-[#D4B27A]/45 sm:gap-3 sm:p-1.5 sm:pe-3.5"
+      className="group inline-flex min-h-[44px] min-w-0 items-center gap-2.5 py-1 transition-opacity duration-200 hover:opacity-90 sm:gap-3"
     >
-      <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-[8px] bg-[#FDFDFD] p-0.5 ring-1 ring-black/10 sm:h-11 sm:w-11">
-        <Image
-          src="/images/Ahmed Elbeek Global Trade Logo.png"
-          alt={alt}
-          width={1254}
-          height={1254}
-          priority
-          sizes="48px"
-          className="h-full w-full object-contain"
-        />
-        <span
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-[#B51219] via-[#D4B27A] to-[#B51219]"
-        />
-      </span>
+      <Image
+        src="/logo/logo-mark-dark.svg"
+        alt={alt}
+        width={40}
+        height={40}
+        priority
+        unoptimized
+        className="h-9 w-9 shrink-0 object-contain lg:h-10 lg:w-10"
+      />
       <span className="flex min-w-0 flex-col">
         <span
           className={`truncate font-extrabold leading-tight text-[#F5F6F7] ${

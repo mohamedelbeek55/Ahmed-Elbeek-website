@@ -15,11 +15,11 @@ export const arContent: SiteContent = {
   },
   nav: [
     { id: "hero", label: "الرئيسية", href: "#hero" },
+    { id: "our-work", label: "أعمالنا", href: "#our-work" },
     { id: "about", label: "من نحن", href: "#about" },
     { id: "services", label: "خدماتنا", href: "#services" },
     { id: "process", label: "كيف نعمل", href: "#process" },
     { id: "locations", label: "نطاق عملنا", href: "#locations" },
-    { id: "our-work", label: "أعمالنا", href: "#our-work" },
     { id: "why-us", label: "لماذا نحن", href: "#why-us" },
     { id: "contact", label: "تواصل معنا", href: "#contact" },
   ],
@@ -73,7 +73,7 @@ export const arContent: SiteContent = {
   },
   about: {
     eyebrow: "من نحن",
-    heading: "شريك عملي لتنظيم حركة الاستيراد والتصدير والتخليص الجمركي.",
+    heading: "شريك عملي لتنظيم حركة الاستيراد والتصدير والتخليص الجمركي",
     paragraphs: [
       "تعمل شركة أحمد البيك للاستيراد والتصدير في تقديم حلول متكاملة لإدارة وتنسيق الشحنات التجارية عبر المنافذ البرية والبحرية، مع تركيز أساسي على وضوح الإجراءات وتسهيل حركة البضائع.",
       "نحرص في كل عملية على المتابعة المباشرة من مرحلة التنسيق وتجهيز المستندات وحتى إتمام التخليص الجمركي وترتيب النقل، بما يدعم استمرارية أعمال عملائنا دون تعقيد.",
@@ -95,7 +95,7 @@ export const arContent: SiteContent = {
   },
   services: {
     eyebrow: "خدماتنا",
-    heading: "حلول متكاملة لأعمالك التجارية.",
+    heading: "حلول متكاملة لأعمالك التجارية",
     items: [
       {
         id: "import-export",
@@ -125,7 +125,7 @@ export const arContent: SiteContent = {
   },
   process: {
     eyebrow: "كيف نعمل",
-    heading: "خطوات واضحة من الطلب حتى التسليم.",
+    heading: "خطوات واضحة من الطلب حتى التسليم",
     description: "نعمل وفق تسلسل منظم يضمن وضوح الإجراءات وسرعة التنسيق في كل شحنة.",
     steps: [
       {
@@ -152,7 +152,7 @@ export const arContent: SiteContent = {
   },
   locations: {
     eyebrow: "نطاق عملنا",
-    heading: "تواجد فعلي في أهم المنافذ.",
+    heading: "تواجد فعلي في أهم المنافذ",
     description:
       "تنفذ الشركة عملياتها عبر شبكة من المنافذ البرية والبحرية المحورية في مصر، مع حضور وتنسيق ميداني في منفذ العوجة البري وموانئ الإسكندرية ودمياط والسويس ونويبع.",
     items: [
@@ -204,7 +204,7 @@ export const arContent: SiteContent = {
   },
   ourWork: {
     eyebrow: "أعمالنا",
-    heading: "لقطات من أعمالنا وشحناتنا على أرض الواقع.",
+    heading: "من أرض الواقع.. شحناتنا وأعمالنا",
     description:
       "نماذج حية من تجهيز الشاحنات وتحميل مختلف أنواع البضائع واستعدادها للتحرك عبر المنافذ.",
     photos: [

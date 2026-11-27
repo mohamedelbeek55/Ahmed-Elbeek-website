@@ -9,7 +9,7 @@ interface ServicesSectionProps {
 
 function ServiceIcon({ icon }: { icon: ServiceItem["icon"] }) {
   const props = {
-    className: "h-7 w-7 text-[#F4585E]",
+    className: "h-7 w-7 text-[#D4B27A]",
     strokeWidth: 1.65,
     "aria-hidden": true as const,
   };
@@ -45,7 +45,7 @@ export function ServicesSection({ content }: ServicesSectionProps) {
         <div className="mt-8 grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:mt-10 lg:grid-cols-4">
           {content.services.items.map((service, index) => (
             <RevealOnScroll key={service.id} delayMs={index * 70}>
-              <article className="group flex h-full flex-col rounded-[14px] border border-white/10 bg-[#151F2B] p-6 transition-colors duration-200 hover:border-[#B51219]/45 hover:bg-[#192533]">
+              <article className="group flex h-full flex-col rounded-[14px] border border-white/10 bg-[#151F2B] p-6 transition-colors duration-200 hover:border-[#D4B27A]/45 hover:bg-[#192533]">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-[12px] border border-[#D4B27A]/25 bg-[#0B0F14]/70">
                   <ServiceIcon icon={service.icon} />
                 </div>

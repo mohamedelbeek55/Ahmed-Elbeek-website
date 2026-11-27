@@ -18,12 +18,19 @@ export function buildLocaleMetadata(opts: {
 }): Metadata {
   const isAr = opts.locale === "ar";
   const path = isAr ? "/" : "/en";
-  const ogImage = isAr ? "/opengraph-ar.png" : "/opengraph-en.png";
+  const ogImage = "/og-logo.png";
 
   return {
     metadataBase: new URL(SITE_URL),
     title: opts.title,
     description: opts.description,
+    icons: {
+      icon: [
+        { url: "/logo/logo-mark-dark.svg", type: "image/svg+xml" },
+        { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      ],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     alternates: {
       canonical: path,
       languages: {

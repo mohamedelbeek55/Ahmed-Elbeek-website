@@ -35,7 +35,7 @@ export function SiteShell({ content }: SiteShellProps) {
       ? "Ahmed Elbeek Import & Export"
       : "أحمد البيك للاستيراد والتصدير",
     url: `${SITE_URL}${isAr ? "/" : "/en"}`,
-    logo: `${SITE_URL}/images/Ahmed%20Elbeek%20Global%20Trade%20Logo.png`,
+    logo: `${SITE_URL}/logo/logo-full-light.svg`,
     email: COMPANY_CONTACT.email,
     telephone: [
       COMPANY_CONTACT.primaryPhoneE164,
@@ -79,11 +79,11 @@ export function SiteShell({ content }: SiteShellProps) {
       <main id="main-content">
         <HeroSection content={content} />
         <TrustStrip content={content} />
+        <OurWorkSection content={content} />
         <AboutSection content={content} />
         <ServicesSection content={content} />
         <ProcessSection content={content} />
         <LocationsSection content={content} />
-        <OurWorkSection content={content} />
         <WhyUsSection content={content} />
         <ContactSection content={content} />
       </main>

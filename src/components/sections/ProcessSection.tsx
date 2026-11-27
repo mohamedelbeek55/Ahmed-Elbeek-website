@@ -28,10 +28,10 @@ export function ProcessSection({ content }: ProcessSectionProps) {
           {/* Desktop horizontal connector line linking step nodes */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-10 top-6 hidden h-[2px] bg-gradient-to-r from-[#B51219]/20 via-[#B51219]/75 to-[#D4B27A]/50 lg:block"
+            className="pointer-events-none absolute inset-x-10 top-6 hidden h-[2px] bg-gradient-to-r from-[#D4B27A]/15 via-[#D4B27A]/55 to-[#D4B27A]/15 lg:block"
           />
 
-          <ol className="relative space-y-6 before:absolute before:bottom-6 before:start-[23px] before:top-6 before:w-[2px] before:bg-gradient-to-b before:from-[#D4B27A]/60 before:via-[#B51219]/80 before:to-[#B51219]/20 lg:grid lg:grid-cols-4 lg:gap-6 lg:space-y-0 lg:before:hidden">
+          <ol className="relative space-y-6 before:absolute before:bottom-6 before:start-[23px] before:top-6 before:w-[2px] before:bg-gradient-to-b before:from-[#D4B27A]/55 before:via-[#D4B27A]/35 before:to-[#D4B27A]/10 lg:grid lg:grid-cols-4 lg:gap-6 lg:space-y-0 lg:before:hidden">
             {content.process.steps.map((step, index) => (
               <li key={step.number} className="relative">
                 <RevealOnScroll delayMs={index * 75} className="h-full">

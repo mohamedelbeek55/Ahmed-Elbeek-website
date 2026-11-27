@@ -159,7 +159,7 @@ export function OurWorkSection({ content }: OurWorkSectionProps) {
     <section
       id="our-work"
       aria-labelledby="our-work-heading"
-      className="scroll-mt-20 bg-[#0B0F14] py-12 sm:py-16 lg:py-20"
+      className="scroll-mt-20 bg-[#0B0F14] pb-12 pt-10 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-16"
     >
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <RevealOnScroll>
@@ -167,7 +167,6 @@ export function OurWorkSection({ content }: OurWorkSectionProps) {
             eyebrow={content.ourWork.eyebrow}
             heading={content.ourWork.heading}
             headingId="our-work-heading"
-            description={content.ourWork.description}
           />
         </RevealOnScroll>
 
@@ -225,7 +224,7 @@ export function OurWorkSection({ content }: OurWorkSectionProps) {
 
                 <span
                   aria-hidden="true"
-                  className="absolute top-2.5 end-2.5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-[#0B0F14]/70 text-[#F5F6F7] backdrop-blur-sm transition-all duration-200 group-hover:border-[#D4B27A]/60 group-hover:bg-[#B51219] lg:opacity-0 lg:group-hover:opacity-100"
+                  className="absolute top-2.5 end-2.5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-[#0B0F14]/70 text-[#F5F6F7] backdrop-blur-sm transition-all duration-200 group-hover:border-[#D4B27A]/60 group-hover:bg-[#D4B27A] group-hover:text-[#0B0F14] lg:opacity-0 lg:group-hover:opacity-100"
                 >
                   <Expand className="h-4 w-4" strokeWidth={1.85} />
                 </span>
@@ -255,7 +254,7 @@ export function OurWorkSection({ content }: OurWorkSectionProps) {
                   <span
                     className={`h-2 rounded-full transition-all duration-200 ${
                       isSelected
-                        ? "w-7 bg-gradient-to-r from-[#D4B27A] to-[#B51219]"
+                        ? "w-7 bg-[#D4B27A]"
                         : "w-2 bg-white/25"
                     }`}
                   />
@@ -282,7 +281,7 @@ export function OurWorkSection({ content }: OurWorkSectionProps) {
           >
             <div className="mb-2.5 flex items-center justify-between px-1">
               <span className="inline-flex items-center gap-2 text-[13px] font-bold text-[#D4B27A] tabular-nums">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#B51219]" aria-hidden="true" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#D4B27A]" aria-hidden="true" />
                 <bdi dir="ltr">
                   {activeIndex + 1} / {photos.length}
                 </bdi>

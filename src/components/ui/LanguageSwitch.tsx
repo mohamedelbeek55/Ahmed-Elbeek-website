@@ -30,7 +30,7 @@ export function LanguageSwitch({
         <span
           className={`inline-flex h-[34px] w-full items-center justify-center rounded-[7px] px-2 transition-colors ${
             locale === "en"
-              ? "bg-[#B51219] text-white"
+              ? "bg-[#D4B27A] text-[#0B0F14]"
               : "text-[#A7B0BC] hover:text-[#F5F6F7]"
           }`}
         >
@@ -46,7 +46,7 @@ export function LanguageSwitch({
         <span
           className={`inline-flex h-[34px] w-full items-center justify-center rounded-[7px] px-2 transition-colors ${
             locale === "ar"
-              ? "bg-[#B51219] text-white"
+              ? "bg-[#D4B27A] text-[#0B0F14]"
               : "text-[#A7B0BC] hover:text-[#F5F6F7]"
           }`}
         >
