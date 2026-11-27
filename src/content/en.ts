@@ -6,7 +6,7 @@ export const enContent: SiteContent = {
   meta: {
     title: "Ahmed Elbeek Import & Export | Customs Clearance & Port Logistics",
     description:
-      "Ahmed Elbeek Import & Export provides import, export, customs clearance, and cargo transport coordination across Al-Awja Land Port, Alexandria Port, and Damietta Port.",
+      "Ahmed Elbeek Import & Export provides import, export, customs clearance, and cargo transport coordination across Al-Awja Land Port and Alexandria, Damietta, Suez, and Nuweiba ports.",
   },
   brand: {
     title: "Ahmed Elbeek",
@@ -32,12 +32,12 @@ export const enContent: SiteContent = {
     skipToContent: "Skip to main content",
   },
   hero: {
-    ports: ["Al-Awja Land Port", "Alexandria Port", "Damietta Port"],
+    ports: ["Al-Awja Land Port", "Alexandria", "Damietta", "Suez", "Nuweiba"],
     headlineLine1: "Ahmed Elbeek",
     headlineLine2: "Import & Export",
     subheadline: "Trade Services. Every Detail Followed.",
     description:
-      "Import, export, customs clearance, and cargo transport coordination across Al-Awja, Damietta, and Alexandria ports with dedicated follow-up.",
+      "Import, export, customs clearance, and cargo transport coordination across Al-Awja, Alexandria, Damietta, Suez, and Nuweiba ports with dedicated follow-up.",
     primaryCta: "Contact via WhatsApp",
     secondaryCta: "Explore Services",
     yardAlt: "Twilight view of Al-Awja Land Port yard with cargo trucks and the Egyptian flag",
@@ -48,8 +48,8 @@ export const enContent: SiteContent = {
       {
         id: "ports-covered",
         icon: "ports",
-        title: "3 Key Ports Covered",
-        subtitle: "Al-Awja • Alexandria • Damietta",
+        title: "5 Key Ports Covered",
+        subtitle: "Al-Awja • Alexandria • Damietta • Suez • Nuweiba",
       },
       {
         id: "import-export",
@@ -81,7 +81,7 @@ export const enContent: SiteContent = {
     pillars: [
       {
         label: "Operating Scope",
-        value: "Key land & sea gateways (Al-Awja, Alexandria, Damietta)",
+        value: "Key land & sea gateways (Al-Awja, Alexandria, Damietta, Suez, Nuweiba)",
       },
       {
         label: "Core Services",
@@ -155,7 +155,7 @@ export const enContent: SiteContent = {
     eyebrow: "Operating Locations",
     heading: "Active Presence Across Key Gateways.",
     description:
-      "Operations are coordinated across major Egyptian land and sea ports, with active coverage at Al-Awja Land Port, Alexandria Port, and Damietta Port.",
+      "Operations are coordinated across major Egyptian land and sea ports, covering Al-Awja Land Port along with Alexandria, Damietta, Suez, and Nuweiba maritime ports.",
     items: [
       {
         id: "al-awja",
@@ -184,6 +184,20 @@ export const enContent: SiteContent = {
         imageSrc: "/images/damietta-port.jpg",
         imageAlt: "Port control tower and vessels at Damietta Port",
         objectPosition: "50% 48%",
+      },
+    ],
+    secondaryPorts: [
+      {
+        id: "suez",
+        name: "Suez Port",
+        typeBadge: "Sea Port",
+        role: "Coordinating customs clearance, container handling, and commercial import/export cargo through Suez Port.",
+      },
+      {
+        id: "nuweiba",
+        name: "Nuweiba Port",
+        typeBadge: "Sea Port",
+        role: "Managing cargo transit, truck coordination, and customs clearance procedures at Nuweiba Port.",
       },
     ],
     flexibilityNote:
@@ -274,7 +288,7 @@ export const enContent: SiteContent = {
   },
   footer: {
     summary:
-      "Import, export, customs clearance, and freight coordination services across Al-Awja Land Port, Alexandria Port, and Damietta Port.",
+      "Import, export, customs clearance, and freight coordination services across Al-Awja Land Port and Alexandria, Damietta, Suez, and Nuweiba ports.",
     navigationTitle: "Quick Links",
     contactTitle: "Contact Details",
     copyright: "© 2026 Ahmed Elbeek Import & Export. All rights reserved.",

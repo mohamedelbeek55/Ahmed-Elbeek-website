@@ -101,7 +101,32 @@ export function LocationsSection({ content }: LocationsSectionProps) {
           </div>
         </div>
 
-        <RevealOnScroll delayMs={120}>
+        {content.locations.secondaryPorts && content.locations.secondaryPorts.length > 0 && (
+          <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
+            {content.locations.secondaryPorts.map((port, index) => (
+              <RevealOnScroll key={port.id} delayMs={90 + index * 70}>
+                <article className="group flex h-full flex-col justify-between rounded-[16px] border border-white/10 bg-[#151F2B] p-5 transition-colors duration-200 hover:border-[#B51219]/45 hover:bg-[#192533] sm:p-6">
+                  <div>
+                    <div className="flex items-center justify-between gap-3">
+                      <h3 className="text-[19px] font-bold text-[#F5F6F7] sm:text-[20px]">
+                        {port.name}
+                      </h3>
+                      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-[#D4B27A]/40 bg-[#0B0F14]/88 px-3 py-1 text-[12px] font-bold text-[#D4B27A]">
+                        <MapPin className="h-3.5 w-3.5 shrink-0" strokeWidth={2} aria-hidden="true" />
+                        <span>{port.typeBadge}</span>
+                      </span>
+                    </div>
+                    <p className="mt-2.5 text-[14.5px] leading-[1.7] text-[#A7B0BC] sm:text-[15px]">
+                      {port.role}
+                    </p>
+                  </div>
+                </article>
+              </RevealOnScroll>
+            ))}
+          </div>
+        )}
+
+        <RevealOnScroll delayMs={160}>
           <div className="mt-6 flex items-start gap-3 rounded-[14px] border border-white/10 bg-[#151F2B] p-4 sm:items-center sm:px-6">
             <Compass
               className="mt-0.5 h-5 w-5 shrink-0 text-[#D4B27A] sm:mt-0"

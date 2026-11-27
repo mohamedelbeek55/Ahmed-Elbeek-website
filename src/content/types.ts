@@ -37,6 +37,13 @@ export interface LocationItem {
   featured?: boolean;
 }
 
+export interface SecondaryPortItem {
+  id: string;
+  name: string;
+  typeBadge: string;
+  role: string;
+}
+
 export interface WorkPhotoItem {
   id: string;
   src: string;
@@ -111,6 +118,7 @@ export interface SiteContent {
     heading: string;
     description: string;
     items: LocationItem[];
+    secondaryPorts?: SecondaryPortItem[];
     flexibilityNote: string;
   };
   ourWork: {

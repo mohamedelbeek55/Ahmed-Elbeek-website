@@ -45,6 +45,8 @@ export function SiteShell({ content }: SiteShellProps) {
       { "@type": "Place", name: "Al-Awja Land Port" },
       { "@type": "Place", name: "Alexandria Port" },
       { "@type": "Place", name: "Damietta Port" },
+      { "@type": "Place", name: "Suez Port" },
+      { "@type": "Place", name: "Nuweiba Port" },
       { "@type": "Country", name: "Egypt" },
     ],
     ...(orgAddress ? { address: orgAddress } : {}),
