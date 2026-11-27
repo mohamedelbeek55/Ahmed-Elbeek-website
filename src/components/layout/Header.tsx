@@ -137,7 +137,11 @@ export function Header({ content }: HeaderProps) {
               <span>{content.header.whatsappCta}</span>
             </a>
 
-            <LanguageSwitch locale={content.locale} label={content.header.switchLabel} />
+            <LanguageSwitch
+              locale={content.locale}
+              label={content.header.switchLabel}
+              compactOnMobile
+            />
 
             <button
               ref={menuBtnRef}

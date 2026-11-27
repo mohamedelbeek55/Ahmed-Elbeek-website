@@ -62,7 +62,7 @@ export function BrandLogo({
         height={48}
         priority
         unoptimized
-        className="h-[34px] w-auto min-[390px]:h-[38px] sm:h-[42px] lg:h-[48px]"
+        className="h-[40px] w-auto min-[390px]:h-[43px] sm:h-[45px] lg:h-[48px]"
       />
     </a>
   );
