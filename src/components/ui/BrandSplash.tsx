@@ -92,24 +92,17 @@ export function BrandSplash({ content }: BrandSplashProps) {
         <Image
           src="/logo/logo-full-dark.svg"
           alt={content.brand.logoAlt}
-          width={230}
-          height={178}
+          width={240}
+          height={186}
           priority
           unoptimized
-          className="h-auto w-[185px] object-contain sm:w-[225px]"
+          className="h-auto w-[195px] object-contain sm:w-[240px]"
         />
-
-        {content.locale === "ar" && (
-          <p className="mt-4 text-[17px] font-bold tracking-normal text-[#F5F6F7] sm:text-[19px]">
-            {content.brand.title}{" "}
-            <span className="text-[#D4B27A]">{content.brand.subtitle}</span>
-          </p>
-        )}
 
         {/* Restrained gold-to-crimson loading hairline */}
         <div
           aria-hidden="true"
-          className="mt-5 h-[2px] w-40 overflow-hidden rounded-full bg-white/10 sm:w-48"
+          className="mt-6 h-[2px] w-40 overflow-hidden rounded-full bg-white/10 sm:w-48"
         >
           <div className="splash-progress-bar h-full w-1/2 rounded-full bg-gradient-to-r from-transparent via-[#D4B27A] to-[#B51219]" />
         </div>

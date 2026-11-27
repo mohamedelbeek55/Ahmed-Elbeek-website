@@ -155,7 +155,7 @@ export function HeroSection({ content }: HeroSectionProps) {
       {/* ================= MOBILE / TABLET HERO (< 1024px) ================= */}
       <div className="relative bg-[#0B0F14] lg:hidden">
         {/* Authentic Unfiltered Al-Awja Panoramic Stage */}
-        <div className="relative h-[236px] w-full overflow-hidden min-[390px]:h-[276px] min-[430px]:h-[310px] sm:h-[365px] md:h-[400px]">
+        <div className="relative h-[228px] w-full overflow-hidden min-[390px]:h-[272px] min-[430px]:h-[306px] sm:h-[365px] md:h-[400px]">
           <Image
             src="/images/al-awja-yard.jpg"
             alt={content.hero.yardAlt}
