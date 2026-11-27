@@ -9,9 +9,8 @@ interface BrandLogoProps {
 }
 
 /**
- * Transparent vector brand logo system:
- * - Header: crisp globe mark SVG directly on dark surface next to bilingual live HTML title/subtitle
- * - Footer: full stacked dark-mode SVG lockup cleanly sized without opaque plaque backing
+ * Transparent vector brand logo system preserving the full stacked lockup
+ * (globe + "Ahmed Elbeek" + "IMPORT & EXPORT") without any white box backing.
  */
 export function BrandLogo({
   title,
@@ -22,15 +21,29 @@ export function BrandLogo({
 }: BrandLogoProps) {
   if (variant === "footer") {
     return (
-      <div className="inline-block max-w-full">
+      <div className="flex flex-wrap items-center gap-4">
         <Image
           src="/logo/logo-full-dark.svg"
           alt={alt}
-          width={180}
-          height={139}
+          width={176}
+          height={136}
           unoptimized
-          className="h-auto w-[160px] object-contain sm:w-[180px]"
+          className="h-auto w-[142px] shrink-0 object-contain sm:w-[168px]"
         />
+        <div className="min-w-0">
+          <p className="text-[19px] font-extrabold leading-snug text-[#F5F6F7] sm:text-[21px]">
+            {title}
+          </p>
+          <p
+            className={`mt-0.5 font-semibold text-[#D4B27A] ${
+              locale === "ar"
+                ? "text-[14px]"
+                : "text-[12.5px] uppercase tracking-[0.08em]"
+            }`}
+          >
+            {subtitle}
+          </p>
+        </div>
       </div>
     );
   }
@@ -38,21 +51,21 @@ export function BrandLogo({
   return (
     <a
       href="#hero"
-      className="group inline-flex min-h-[44px] min-w-0 items-center gap-2.5 py-1 transition-opacity duration-200 hover:opacity-90 sm:gap-3"
+      className="group inline-flex min-h-[44px] min-w-0 items-center gap-2 py-0.5 transition-opacity duration-200 hover:opacity-90 sm:gap-3"
     >
       <Image
-        src="/logo/logo-mark-dark.svg"
+        src="/logo/logo-full-dark.svg"
         alt={alt}
-        width={40}
-        height={40}
+        width={65}
+        height={50}
         priority
         unoptimized
-        className="h-9 w-9 shrink-0 object-contain lg:h-10 lg:w-10"
+        className="h-10 w-auto shrink-0 object-contain sm:h-11 lg:h-[50px]"
       />
       <span className="flex min-w-0 flex-col">
         <span
           className={`truncate font-extrabold leading-tight text-[#F5F6F7] ${
-            locale === "ar" ? "text-[15px] sm:text-[16px]" : "text-[14px] sm:text-[15px]"
+            locale === "ar" ? "text-[14.5px] sm:text-[16px]" : "text-[13.5px] sm:text-[15px]"
           }`}
         >
           {title}
@@ -61,7 +74,7 @@ export function BrandLogo({
           className={`truncate font-medium leading-tight text-[#D4B27A] ${
             locale === "ar"
               ? "text-[12px] sm:text-[12.5px]"
-              : "text-[12px] uppercase tracking-[0.04em]"
+              : "text-[11px] min-[390px]:text-[12px] uppercase tracking-[0.03em]"
           }`}
         >
           {subtitle}

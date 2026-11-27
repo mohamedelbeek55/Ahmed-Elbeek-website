@@ -59,7 +59,7 @@ export function ContactSection({ content }: ContactSectionProps) {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="scroll-mt-20 bg-[#101721] py-12 sm:py-16 lg:py-20"
+      className="scroll-mt-20 border-t border-white/10 bg-[#101721] py-12 sm:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <RevealOnScroll>

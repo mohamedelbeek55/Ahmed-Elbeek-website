@@ -79,11 +79,11 @@ export function SiteShell({ content }: SiteShellProps) {
       <main id="main-content">
         <HeroSection content={content} />
         <TrustStrip content={content} />
-        <OurWorkSection content={content} />
         <AboutSection content={content} />
+        <LocationsSection content={content} />
+        <OurWorkSection content={content} />
         <ServicesSection content={content} />
         <ProcessSection content={content} />
-        <LocationsSection content={content} />
         <WhyUsSection content={content} />
         <ContactSection content={content} />
       </main>

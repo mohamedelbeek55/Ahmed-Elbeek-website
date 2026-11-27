@@ -15,11 +15,11 @@ export const arContent: SiteContent = {
   },
   nav: [
     { id: "hero", label: "الرئيسية", href: "#hero" },
-    { id: "our-work", label: "أعمالنا", href: "#our-work" },
     { id: "about", label: "من نحن", href: "#about" },
+    { id: "locations", label: "نطاق عملنا", href: "#locations" },
+    { id: "our-work", label: "أعمالنا", href: "#our-work" },
     { id: "services", label: "خدماتنا", href: "#services" },
     { id: "process", label: "كيف نعمل", href: "#process" },
-    { id: "locations", label: "نطاق عملنا", href: "#locations" },
     { id: "why-us", label: "لماذا نحن", href: "#why-us" },
     { id: "contact", label: "تواصل معنا", href: "#contact" },
   ],

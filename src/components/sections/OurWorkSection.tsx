@@ -159,7 +159,7 @@ export function OurWorkSection({ content }: OurWorkSectionProps) {
     <section
       id="our-work"
       aria-labelledby="our-work-heading"
-      className="scroll-mt-20 bg-[#0B0F14] pb-12 pt-10 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-16"
+      className="scroll-mt-20 border-y border-white/10 bg-[#121B26] pb-12 pt-10 sm:pb-16 sm:pt-14 lg:pb-20 lg:pt-16"
     >
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <RevealOnScroll>

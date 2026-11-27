@@ -16,7 +16,7 @@ export function LocationsSection({ content }: LocationsSectionProps) {
     <section
       id="locations"
       aria-labelledby="locations-heading"
-      className="scroll-mt-20 border-y border-white/10 bg-[#121B26] py-12 sm:py-16 lg:py-20"
+      className="scroll-mt-20 bg-[#0B0F14] py-12 sm:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <RevealOnScroll>

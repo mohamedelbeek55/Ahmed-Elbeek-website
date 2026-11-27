@@ -15,11 +15,11 @@ export const enContent: SiteContent = {
   },
   nav: [
     { id: "hero", label: "Home", href: "#hero" },
-    { id: "our-work", label: "Our Work", href: "#our-work" },
     { id: "about", label: "About", href: "#about" },
+    { id: "locations", label: "Locations", href: "#locations" },
+    { id: "our-work", label: "Our Work", href: "#our-work" },
     { id: "services", label: "Services", href: "#services" },
     { id: "process", label: "How We Work", href: "#process" },
-    { id: "locations", label: "Locations", href: "#locations" },
     { id: "why-us", label: "Why Us", href: "#why-us" },
     { id: "contact", label: "Contact", href: "#contact" },
   ],
