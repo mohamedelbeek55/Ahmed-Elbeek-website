@@ -55,6 +55,35 @@ html[lang="en"] body {
   scrollbar-width: none;
 }
 
+@keyframes elbeekSplashProgress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes elbeekSplashAutoReveal {
+  0%,
+  99% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.splash-progress-bar {
+  animation: elbeekSplashProgress 0.85s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.splash-safety-fade {
+  animation: elbeekSplashAutoReveal 2.2s linear forwards;
+}
+
 :focus-visible {
   outline: 2px solid #f5f6f7;
   outline-offset: 3px;

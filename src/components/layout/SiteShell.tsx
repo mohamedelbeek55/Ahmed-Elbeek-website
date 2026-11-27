@@ -12,6 +12,7 @@ import { OurWorkSection } from "@/components/sections/OurWorkSection";
 import { WhyUsSection } from "@/components/sections/WhyUsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/layout/Footer";
+import { BrandSplash } from "@/components/ui/BrandSplash";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 import { AnalyticsTracker } from "@/components/ui/AnalyticsTracker";
 
@@ -68,6 +69,7 @@ export function SiteShell({ content }: SiteShellProps) {
 
   return (
     <div dir={content.dir} className="min-h-screen bg-[#0B0F14] text-[#F5F6F7]">
+      <BrandSplash content={content} />
       <AnalyticsTracker />
       <script
         type="application/ld+json"
