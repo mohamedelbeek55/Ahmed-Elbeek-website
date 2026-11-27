@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { enContent } from "@/content/en";
 import { SiteShell } from "@/components/layout/SiteShell";
+import { enContent } from "@/content/en";
+import { buildLocaleMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildLocaleMetadata({
+  locale: "en",
   title: enContent.meta.title,
   description: enContent.meta.description,
-  alternates: {
-    canonical: "/en",
-    languages: {
-      ar: "/",
-      en: "/en",
-    },
-  },
-};
+});
 
 export default function EnglishHomePage() {
   return <SiteShell content={enContent} />;

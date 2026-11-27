@@ -17,6 +17,7 @@ export const arContent: SiteContent = {
     { id: "hero", label: "الرئيسية", href: "#hero" },
     { id: "about", label: "من نحن", href: "#about" },
     { id: "services", label: "خدماتنا", href: "#services" },
+    { id: "process", label: "كيف نعمل", href: "#process" },
     { id: "locations", label: "نطاق عملنا", href: "#locations" },
     { id: "our-work", label: "أعمالنا", href: "#our-work" },
     { id: "why-us", label: "لماذا نحن", href: "#why-us" },
@@ -31,7 +32,7 @@ export const arContent: SiteContent = {
     skipToContent: "تخطي إلى المحتوى الرئيسي",
   },
   hero: {
-    portsLine: "منفذ العوجة البري  |  ميناء الإسكندرية  |  ميناء دمياط",
+    ports: ["منفذ العوجة البري", "ميناء الإسكندرية", "ميناء دمياط"],
     headlineLine1: "أحمد البيك",
     headlineLine2: "للاستيراد والتصدير",
     subheadline: "خدمات تجارية.. ومتابعة لكل التفاصيل.",
@@ -40,6 +41,35 @@ export const arContent: SiteContent = {
     primaryCta: "تواصل معنا عبر واتساب",
     secondaryCta: "اكتشف خدماتنا",
     yardAlt: "ساحة منفذ العوجة البري وقت الغروب مع اصطفاف الشاحنات والعلم المصري",
+  },
+  trustStrip: {
+    ariaLabel: "ملخص نطاق العمل والخدمات",
+    items: [
+      {
+        id: "ports-covered",
+        icon: "ports",
+        title: "3 منافذ رئيسية مغطاة",
+        subtitle: "العوجة • الإسكندرية • دمياط",
+      },
+      {
+        id: "import-export",
+        icon: "trade",
+        title: "استيراد وتصدير",
+        subtitle: "إدارة وتنفيذ الشحنات",
+      },
+      {
+        id: "customs-clearance",
+        icon: "clearance",
+        title: "تخليص جمركي منظم",
+        subtitle: "إجراءات دقيقة وفق اللوائح",
+      },
+      {
+        id: "field-followup",
+        icon: "followup",
+        title: "متابعة ميدانية مباشرة",
+        subtitle: "من المنفذ حتى التسليم",
+      },
+    ],
   },
   about: {
     eyebrow: "من نحن",
@@ -93,6 +123,33 @@ export const arContent: SiteContent = {
       },
     ],
   },
+  process: {
+    eyebrow: "كيف نعمل",
+    heading: "خطوات واضحة من الطلب حتى التسليم.",
+    description: "نعمل وفق تسلسل منظم يضمن وضوح الإجراءات وسرعة التنسيق في كل شحنة.",
+    steps: [
+      {
+        number: "01",
+        title: "الطلب والاستشارة الأولية",
+        description: "مراجعة تفاصيل الشحنة ونوع البضاعة والمنفذ المستهدف وتحديد مسار التنفيذ المناسب.",
+      },
+      {
+        number: "02",
+        title: "تجهيز ومراجعة المستندات",
+        description: "تدقيق الفواتير والبوليصة وكافة الأوراق الجمركية المطلوبة قبل بدء الإجراءات.",
+      },
+      {
+        number: "03",
+        title: "التخليص الجمركي والتنسيق بالميناء",
+        description: "متابعة الفحص والموافقات وإنهاء الإجراءات الجمركية مباشرة داخل المنفذ البري أو البحري.",
+      },
+      {
+        number: "04",
+        title: "متابعة النقل والتسليم",
+        description: "تنظيم خروج الشاحنات أو الحاويات ومتابعة التحرك حتى وصول الشحنة للوجهة المحددة.",
+      },
+    ],
+  },
   locations: {
     eyebrow: "نطاق عملنا",
     heading: "تواجد فعلي في أهم المنافذ.",
@@ -106,7 +163,7 @@ export const arContent: SiteContent = {
         role: "تنسيق حركة الشاحنات البرية، إجراءات العبور، والمتابعة الميدانية المباشرة للبضائع.",
         imageSrc: "/images/al-awja-gate.jpg",
         imageAlt: "البوابة الرئيسية لميناء العوجة البري",
-        objectPosition: "50% 18%",
+        objectPosition: "50% 8%",
         featured: true,
       },
       {
@@ -156,6 +213,8 @@ export const arContent: SiteContent = {
         objectPosition: "50% 50%",
       },
     ],
+    carouselDotsLabel: "التنقل بين صور الأعمال",
+    slideLabelPrefix: "عرض الصورة",
     lightbox: {
       openLabel: "عرض الصورة بالحجم الكامل",
       closeLabel: "إغلاق عرض الصورة",
@@ -199,6 +258,18 @@ export const arContent: SiteContent = {
     whatsappCta: "تواصل عبر واتساب",
     phoneLabel: "اتصال هاتفي",
     emailLabel: "البريد الإلكتروني",
+    saveContact: "حفظ جهة الاتصال",
+    share: "مشاركة البطاقة",
+    shareCopied: "تم نسخ رابط الموقع",
+    shareText: "أحمد البيك للاستيراد والتصدير — خدمات التخليص الجمركي والشحن عبر المنافذ المصرية",
+    companyDetailsHeading: "بيانات الشركة الرسمية",
+    detailsLabels: {
+      commercialRegister: "السجل التجاري",
+      taxCard: "البطاقة الضريبية",
+      importersRegister: "سجل المستوردين",
+      address: "العنوان",
+      workingHours: "ساعات العمل",
+    },
   },
   footer: {
     summary:

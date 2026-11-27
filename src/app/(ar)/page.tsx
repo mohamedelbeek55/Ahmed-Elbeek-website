@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import { arContent } from "@/content/ar";
 import { SiteShell } from "@/components/layout/SiteShell";
+import { arContent } from "@/content/ar";
+import { buildLocaleMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildLocaleMetadata({
+  locale: "ar",
   title: arContent.meta.title,
   description: arContent.meta.description,
-  alternates: {
-    canonical: "/",
-    languages: {
-      ar: "/",
-      en: "/en",
-    },
-  },
-};
+});
 
-export default function HomePage() {
+export default function ArabicHomePage() {
   return <SiteShell content={arContent} />;
 }

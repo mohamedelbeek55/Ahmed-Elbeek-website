@@ -6,6 +6,19 @@ export interface NavItem {
   href: string;
 }
 
+export interface TrustItem {
+  id: string;
+  icon: "ports" | "trade" | "clearance" | "followup";
+  title: string;
+  subtitle: string;
+}
+
+export interface ProcessStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
 export interface ServiceItem {
   id: string;
   icon: "package" | "file" | "truck" | "layers";
@@ -60,7 +73,7 @@ export interface SiteContent {
     skipToContent: string;
   };
   hero: {
-    portsLine: string;
+    ports: string[];
     headlineLine1: string;
     headlineLine2: string;
     subheadline: string;
@@ -68,6 +81,10 @@ export interface SiteContent {
     primaryCta: string;
     secondaryCta: string;
     yardAlt: string;
+  };
+  trustStrip: {
+    ariaLabel: string;
+    items: TrustItem[];
   };
   about: {
     eyebrow: string;
@@ -83,6 +100,12 @@ export interface SiteContent {
     heading: string;
     items: ServiceItem[];
   };
+  process: {
+    eyebrow: string;
+    heading: string;
+    description: string;
+    steps: ProcessStep[];
+  };
   locations: {
     eyebrow: string;
     heading: string;
@@ -95,6 +118,8 @@ export interface SiteContent {
     heading: string;
     description: string;
     photos: WorkPhotoItem[];
+    carouselDotsLabel: string;
+    slideLabelPrefix: string;
     lightbox: {
       openLabel: string;
       closeLabel: string;
@@ -113,6 +138,18 @@ export interface SiteContent {
     whatsappCta: string;
     phoneLabel: string;
     emailLabel: string;
+    saveContact: string;
+    share: string;
+    shareCopied: string;
+    shareText: string;
+    companyDetailsHeading: string;
+    detailsLabels: {
+      commercialRegister: string;
+      taxCard: string;
+      importersRegister: string;
+      address: string;
+      workingHours: string;
+    };
   };
   footer: {
     summary: string;

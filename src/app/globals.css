@@ -7,7 +7,7 @@
   --bg-elevated: #192533;
   --brand-red: #b51219;
   --brand-red-hover: #9b0f15;
-  --brand-red-glow: rgba(181, 18, 25, 0.22);
+  --brand-red-glow: rgba(181, 18, 25, 0.2);
   --accent-gold: #d4b27a;
   --accent-gold-muted: #c9a46b;
   --text-red-accent: #f4585e;
@@ -33,19 +33,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html[lang="ar"] body,
-[data-locale="ar"] {
+html[lang="ar"] body {
   font-family: var(--font-cairo), "Cairo", "Segoe UI", Tahoma, sans-serif;
   letter-spacing: 0;
 }
 
-html[lang="en"] body,
-[data-locale="en"] {
+html[lang="en"] body {
   font-family: var(--font-jakarta), "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
 }
 
 .tabular-nums {
   font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbars cleanly for snap-scroll carousel on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 :focus-visible {

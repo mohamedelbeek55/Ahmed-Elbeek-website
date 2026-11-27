@@ -9,8 +9,8 @@ interface BrandLogoProps {
 }
 
 /**
- * Deliberate architectural white crest plaque framing the unmodified 1254x1254
- * master PNG, accented with restrained ruby & champagne-gold trim.
+ * Architectural white crest plaque framing the unmodified 1254x1254 master PNG,
+ * accented with restrained ruby & champagne-gold trim.
  */
 export function BrandLogo({
   title,
@@ -57,7 +57,7 @@ export function BrandLogo({
   return (
     <a
       href="#hero"
-      className="group inline-flex min-w-0 items-center gap-2.5 rounded-[12px] border border-[#D4B27A]/22 bg-[#151F2B]/92 p-1 pe-3 shadow-[0_6px_20px_rgba(0,0,0,0.45)] transition-colors duration-200 hover:border-[#D4B27A]/45 sm:gap-3 sm:p-1.5 sm:pe-3.5"
+      className="group inline-flex min-h-[44px] min-w-0 items-center gap-2.5 rounded-[12px] border border-[#D4B27A]/22 bg-[#151F2B]/92 p-1 pe-3 shadow-[0_6px_20px_rgba(0,0,0,0.45)] transition-colors duration-200 hover:border-[#D4B27A]/45 sm:gap-3 sm:p-1.5 sm:pe-3.5"
     >
       <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-[8px] bg-[#FDFDFD] p-0.5 ring-1 ring-black/10 sm:h-11 sm:w-11">
         <Image
@@ -85,8 +85,8 @@ export function BrandLogo({
         <span
           className={`truncate font-medium leading-tight text-[#D4B27A] ${
             locale === "ar"
-              ? "text-[11px] sm:text-[12px]"
-              : "text-[11px] uppercase tracking-[0.06em] sm:text-[11.5px]"
+              ? "text-[12px] sm:text-[12.5px]"
+              : "text-[12px] uppercase tracking-[0.04em]"
           }`}
         >
           {subtitle}

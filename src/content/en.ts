@@ -17,6 +17,7 @@ export const enContent: SiteContent = {
     { id: "hero", label: "Home", href: "#hero" },
     { id: "about", label: "About", href: "#about" },
     { id: "services", label: "Services", href: "#services" },
+    { id: "process", label: "How We Work", href: "#process" },
     { id: "locations", label: "Locations", href: "#locations" },
     { id: "our-work", label: "Our Work", href: "#our-work" },
     { id: "why-us", label: "Why Us", href: "#why-us" },
@@ -31,7 +32,7 @@ export const enContent: SiteContent = {
     skipToContent: "Skip to main content",
   },
   hero: {
-    portsLine: "Al-Awja Land Port  |  Alexandria Port  |  Damietta Port",
+    ports: ["Al-Awja Land Port", "Alexandria Port", "Damietta Port"],
     headlineLine1: "Ahmed Elbeek",
     headlineLine2: "Import & Export",
     subheadline: "Trade Services. Every Detail Followed.",
@@ -40,6 +41,35 @@ export const enContent: SiteContent = {
     primaryCta: "Contact via WhatsApp",
     secondaryCta: "Explore Services",
     yardAlt: "Twilight view of Al-Awja Land Port yard with cargo trucks and the Egyptian flag",
+  },
+  trustStrip: {
+    ariaLabel: "Operating scope and service highlights",
+    items: [
+      {
+        id: "ports-covered",
+        icon: "ports",
+        title: "3 Key Ports Covered",
+        subtitle: "Al-Awja • Alexandria • Damietta",
+      },
+      {
+        id: "import-export",
+        icon: "trade",
+        title: "Import & Export",
+        subtitle: "End-to-End Execution",
+      },
+      {
+        id: "customs-clearance",
+        icon: "clearance",
+        title: "Customs Clearance",
+        subtitle: "Compliant Port Processing",
+      },
+      {
+        id: "field-followup",
+        icon: "followup",
+        title: "Field Follow-up",
+        subtitle: "Port Gate to Delivery",
+      },
+    ],
   },
   about: {
     eyebrow: "About Us",
@@ -93,6 +123,34 @@ export const enContent: SiteContent = {
       },
     ],
   },
+  process: {
+    eyebrow: "How We Work",
+    heading: "Four Clear Steps From Inquiry to Delivery.",
+    description:
+      "A structured operational sequence designed to keep paperwork accurate and cargo moving without unnecessary delays.",
+    steps: [
+      {
+        number: "01",
+        title: "Request & Consultation",
+        description: "Reviewing cargo details, target port, and commercial requirements to confirm the execution plan.",
+      },
+      {
+        number: "02",
+        title: "Documents Preparation",
+        description: "Checking invoices, bills of lading, and required customs paperwork prior to submission.",
+      },
+      {
+        number: "03",
+        title: "Customs Clearance & Port Coordination",
+        description: "Managing inspections, port approvals, and customs release directly on-site at the gateway.",
+      },
+      {
+        number: "04",
+        title: "Transport & Delivery Follow-up",
+        description: "Scheduling truck dispatch and tracking freight movement through final delivery.",
+      },
+    ],
+  },
   locations: {
     eyebrow: "Operating Locations",
     heading: "Active Presence Across Key Gateways.",
@@ -106,7 +164,7 @@ export const enContent: SiteContent = {
         role: "Coordinating cross-border truck movements, gate procedures, and direct field follow-up.",
         imageSrc: "/images/al-awja-gate.jpg",
         imageAlt: "Main arched gateway of Al-Awja Land Port",
-        objectPosition: "50% 18%",
+        objectPosition: "50% 8%",
         featured: true,
       },
       {
@@ -156,6 +214,8 @@ export const enContent: SiteContent = {
         objectPosition: "50% 50%",
       },
     ],
+    carouselDotsLabel: "Browse work photos",
+    slideLabelPrefix: "View photo",
     lightbox: {
       openLabel: "View photo full size",
       closeLabel: "Close photo viewer",
@@ -199,6 +259,18 @@ export const enContent: SiteContent = {
     whatsappCta: "Chat on WhatsApp",
     phoneLabel: "Phone",
     emailLabel: "Email",
+    saveContact: "Save Contact",
+    share: "Share",
+    shareCopied: "Link copied",
+    shareText: "Ahmed Elbeek Import & Export — Customs Clearance & Port Logistics in Egypt",
+    companyDetailsHeading: "Official Company Details",
+    detailsLabels: {
+      commercialRegister: "Commercial Register",
+      taxCard: "Tax Card",
+      importersRegister: "Importers Register",
+      address: "Address",
+      workingHours: "Working Hours",
+    },
   },
   footer: {
     summary:

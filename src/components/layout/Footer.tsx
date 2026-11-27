@@ -1,19 +1,52 @@
-import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
-import { COMPANY_CONTACT } from "@/content/contact";
+import { COMPANY_CONTACT, COMPANY_DETAILS } from "@/content/contact";
 import type { SiteContent } from "@/content/types";
 import { BrandLogo } from "@/components/ui/BrandLogo";
+import { LanguageSwitch } from "@/components/ui/LanguageSwitch";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 interface FooterProps {
   content: SiteContent;
 }
 
 export function Footer({ content }: FooterProps) {
+  const isRtl = content.dir === "rtl";
+  const footerMeta: Array<{ label: string; value: string; ltr?: boolean }> = [];
+
+  if (COMPANY_DETAILS.commercialRegister) {
+    footerMeta.push({
+      label: content.contact.detailsLabels.commercialRegister,
+      value: COMPANY_DETAILS.commercialRegister,
+      ltr: true,
+    });
+  }
+  if (COMPANY_DETAILS.taxCard) {
+    footerMeta.push({
+      label: content.contact.detailsLabels.taxCard,
+      value: COMPANY_DETAILS.taxCard,
+      ltr: true,
+    });
+  }
+  if (COMPANY_DETAILS.importersRegister) {
+    footerMeta.push({
+      label: content.contact.detailsLabels.importersRegister,
+      value: COMPANY_DETAILS.importersRegister,
+      ltr: true,
+    });
+  }
+  if (COMPANY_DETAILS.address) {
+    const addr = isRtl ? COMPANY_DETAILS.address.ar : COMPANY_DETAILS.address.en;
+    if (addr) footerMeta.push({ label: content.contact.detailsLabels.address, value: addr });
+  }
+  if (COMPANY_DETAILS.workingHours) {
+    const hrs = isRtl ? COMPANY_DETAILS.workingHours.ar : COMPANY_DETAILS.workingHours.en;
+    if (hrs) footerMeta.push({ label: content.contact.detailsLabels.workingHours, value: hrs });
+  }
+
   return (
     <footer className="border-t border-white/10 bg-[#0B0F14] pt-12 pb-24 lg:pb-12">
       <div className="mx-auto max-w-[1380px] px-4 min-[390px]:px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
-          {/* Larger Executive Logo Crest Presentation */}
           <div className="space-y-4 lg:col-span-5">
             <BrandLogo
               title={content.brand.title}
@@ -25,19 +58,28 @@ export function Footer({ content }: FooterProps) {
             <p className="max-w-[44ch] text-[14.5px] leading-[1.75] text-[#A7B0BC]">
               {content.footer.summary}
             </p>
+            {footerMeta.length > 0 && (
+              <ul className="space-y-1.5 pt-1 text-[13px] text-[#A7B0BC]">
+                {footerMeta.map((item) => (
+                  <li key={item.label}>
+                    <span className="font-semibold text-[#D4B27A]">{item.label}: </span>
+                    {item.ltr ? <bdi dir="ltr">{item.value}</bdi> : item.value}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
-          {/* Navigation Anchors */}
           <div className="lg:col-span-4">
             <h3 className="text-[14px] font-bold text-[#F4585E]">
               {content.footer.navigationTitle}
             </h3>
-            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5">
+            <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1">
               {content.nav.map((item) => (
                 <li key={item.id}>
                   <a
                     href={item.href}
-                    className="inline-flex min-h-[36px] items-center text-[14.5px] font-medium text-[#A7B0BC] transition-colors hover:text-[#F5F6F7]"
+                    className="inline-flex min-h-[44px] items-center text-[14.5px] font-medium text-[#A7B0BC] transition-colors hover:text-[#F5F6F7]"
                   >
                     {item.label}
                   </a>
@@ -46,38 +88,55 @@ export function Footer({ content }: FooterProps) {
             </ul>
           </div>
 
-          {/* Direct Contact Summary */}
           <div className="lg:col-span-3">
             <h3 className="text-[14px] font-bold text-[#F4585E]">
               {content.footer.contactTitle}
             </h3>
-            <ul className="mt-4 space-y-2.5 text-[14.5px]">
+            <ul className="mt-3 space-y-1 text-[14.5px]">
               <li>
-                <a
+                <TrackedLink
                   href={COMPANY_CONTACT.primaryPhoneTel}
-                  className="inline-flex min-h-[36px] items-center gap-2.5 text-[#F5F6F7] tabular-nums transition-colors hover:text-[#F4585E]"
+                  eventName="phone_click"
+                  eventData={{
+                    locale: content.locale,
+                    location: "footer",
+                    target: COMPANY_CONTACT.primaryPhoneDisplay,
+                  }}
+                  className="inline-flex min-h-[44px] items-center gap-2.5 text-[#F5F6F7] tabular-nums transition-colors hover:text-[#F4585E]"
                 >
                   <Phone className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
                   <bdi dir="ltr">{COMPANY_CONTACT.primaryPhoneDisplay}</bdi>
-                </a>
+                </TrackedLink>
               </li>
               <li>
-                <a
+                <TrackedLink
                   href={COMPANY_CONTACT.secondaryPhoneTel}
-                  className="inline-flex min-h-[36px] items-center gap-2.5 text-[#F5F6F7] tabular-nums transition-colors hover:text-[#F4585E]"
+                  eventName="phone_click"
+                  eventData={{
+                    locale: content.locale,
+                    location: "footer",
+                    target: COMPANY_CONTACT.secondaryPhoneDisplay,
+                  }}
+                  className="inline-flex min-h-[44px] items-center gap-2.5 text-[#F5F6F7] tabular-nums transition-colors hover:text-[#F4585E]"
                 >
                   <Phone className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
                   <bdi dir="ltr">{COMPANY_CONTACT.secondaryPhoneDisplay}</bdi>
-                </a>
+                </TrackedLink>
               </li>
               <li>
-                <a
+                <TrackedLink
                   href={COMPANY_CONTACT.emailHref}
-                  className="inline-flex min-h-[36px] items-center gap-2.5 text-[#A7B0BC] transition-colors hover:text-[#F5F6F7]"
+                  eventName="email_click"
+                  eventData={{
+                    locale: content.locale,
+                    location: "footer",
+                    target: COMPANY_CONTACT.email,
+                  }}
+                  className="inline-flex min-h-[44px] items-center gap-2.5 text-[#A7B0BC] transition-colors hover:text-[#F5F6F7]"
                 >
                   <Mail className="h-4 w-4 shrink-0 text-[#F4585E]" strokeWidth={1.75} aria-hidden="true" />
                   <bdi dir="ltr">{COMPANY_CONTACT.email}</bdi>
-                </a>
+                </TrackedLink>
               </li>
             </ul>
           </div>
@@ -88,37 +147,11 @@ export function Footer({ content }: FooterProps) {
             {content.footer.copyright}
           </p>
 
-          <div
-            role="group"
-            aria-label={content.header.switchLabel}
-            className="inline-flex h-10 items-center rounded-[10px] border border-white/15 bg-[#151F2B] p-1 text-[12.5px] font-bold"
-          >
-            <Link
-              href="/en"
-              aria-current={content.locale === "en" ? "page" : undefined}
-              className={`rounded-[7px] px-2.5 py-1 transition-colors ${
-                content.locale === "en"
-                  ? "bg-[#B51219] text-white"
-                  : "text-[#A7B0BC] hover:text-[#F5F6F7]"
-              }`}
-            >
-              EN
-            </Link>
-            <span className="mx-0.5 text-white/20" aria-hidden="true">
-              |
-            </span>
-            <Link
-              href="/"
-              aria-current={content.locale === "ar" ? "page" : undefined}
-              className={`rounded-[7px] px-2.5 py-1 transition-colors ${
-                content.locale === "ar"
-                  ? "bg-[#B51219] text-white"
-                  : "text-[#A7B0BC] hover:text-[#F5F6F7]"
-              }`}
-            >
-              AR
-            </Link>
-          </div>
+          <LanguageSwitch
+            locale={content.locale}
+            label={content.header.switchLabel}
+            surfaceClassName="bg-[#151F2B]"
+          />
         </div>
       </div>
     </footer>
