@@ -10,9 +10,9 @@ interface BrandLogoProps {
 
 /**
  * Transparent vector brand logo system:
- * - Header: full stacked dark-mode SVG lockup presented cleanly at prominent scale
- *   so globe, "Ahmed Elbeek", and "IMPORT & EXPORT" remain crisp without extra box chrome.
- * - Footer: full stacked SVG lockup beside localized company identity.
+ * - Header: horizontal transparent SVG lockup preserving the globe mark,
+ *   heavy serif "Ahmed Elbeek", and flanked "IMPORT & EXPORT" rule cleanly in slim bars.
+ * - Footer: full stacked dark-mode SVG crest beside localized company identity.
  */
 export function BrandLogo({
   title,
@@ -56,13 +56,13 @@ export function BrandLogo({
       className="group inline-flex min-h-[48px] shrink-0 items-center py-1 transition-opacity duration-200 hover:opacity-90"
     >
       <Image
-        src="/logo/logo-full-dark.svg"
+        src="/logo/logo-horizontal-dark.svg"
         alt={alt}
-        width={106}
-        height={82}
+        width={235}
+        height={48}
         priority
         unoptimized
-        className="h-[58px] w-auto object-contain sm:h-[64px] lg:h-[72px]"
+        className="h-[34px] w-auto min-[390px]:h-[38px] sm:h-[42px] lg:h-[48px]"
       />
     </a>
   );

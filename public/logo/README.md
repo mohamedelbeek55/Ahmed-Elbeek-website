@@ -7,7 +7,8 @@ Faithfully vectorized transparent SVG assets derived from the official high-reso
 | File | Usage | Colors | ViewBox Aspect | Minimum Size |
 | :--- | :--- | :--- | :--- | :--- |
 | `logo-full-light.svg` | Light/white backgrounds, print, light documents | Globe, wordmark & rules `#AE0001`; subtitle `#2F302F` | Full lockup (~1.29:1) | `>= 120px` wide |
-| `logo-full-dark.svg` | Dark surfaces (`#0B0F14`, `#121B26`, `#151F2B`), footer, OG image | Globe `#D3202A`; wordmark `#F5F6F7`; rules `#B51219`; subtitle `#D4B27A` | Full lockup (~1.29:1) | `>= 120px` wide |
+| `logo-full-dark.svg` | Dark surfaces (`#0B0F14`, `#121B26`, `#151F2B`), footer, splash & OG image | Globe `#D3202A`; wordmark `#F5F6F7`; rules `#B51219`; subtitle `#D4B27A` | Full lockup (~1.29:1) | `>= 120px` wide |
+| `logo-horizontal-dark.svg` | Header navbar horizontal lockup on dark backgrounds | Globe `#D3202A`; gold hairline `#D4B27A`; wordmark `#F5F6F7`; rules `#B51219`; subtitle `#D4B27A` | Horizontal (~4.88:1) | `>= 150px` wide |
 | `logo-mark.svg` | Favicons, compact badges on light surfaces | Globe & orbit mark `#AE0001` | Square `1:1` | `>= 24px` |
 | `logo-mark-dark.svg` | Website header lockup, dark badges, Apple touch icon | Globe & orbit mark `#D3202A` | Square `1:1` | `>= 24px` |
 

@@ -104,7 +104,7 @@ export function MobileDrawer({
             : "ltr:translate-x-full rtl:-translate-x-full"
         }`}
       >
-        <div className="flex h-[76px] items-center justify-between gap-2 border-b border-white/10 px-4 sm:h-[82px]">
+        <div className="flex h-[70px] items-center justify-between gap-2 border-b border-white/10 px-4">
           <div className="min-w-0 shrink">
             <BrandLogo
               title={content.brand.title}

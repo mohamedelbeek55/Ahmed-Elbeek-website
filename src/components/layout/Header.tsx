@@ -86,7 +86,7 @@ export function Header({ content }: HeaderProps) {
       </a>
 
       <header className="sticky top-0 z-40 border-b border-white/12 bg-[#0D131C]/95 backdrop-blur-md">
-        <div className="mx-auto flex h-[76px] max-w-[1380px] items-center justify-between gap-2 px-4 sm:h-[82px] sm:px-5 lg:h-[90px] lg:px-8">
+        <div className="mx-auto flex h-[70px] max-w-[1380px] items-center justify-between gap-2 px-4 sm:px-5 lg:h-[78px] lg:px-8">
           <div className="min-w-0 shrink">
             <BrandLogo
               title={content.brand.title}
